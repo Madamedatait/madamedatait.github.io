@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automatisation - MadameDataIT</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #020617;
+  position: sticky;
+  top: 0;
+}
+
+header h1 {
+  margin: 0;
+  color: #38bdf8;
+  font-size: 16px;
+}
+
+/* BURGER */
+.menu-toggle {
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+nav a:hover {
+  color: #38bdf8;
+  opacity: 1;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 25px 15px 10px;
+}
+
+.hero h2 {
+  font-size: 24px;
+}
+
+.hero p {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* SECTION */
+.section {
+  padding: 10px 15px 30px;
+  text-align: center;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: #020617;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  background: #38bdf8;
+  color: black;
+  padding: 3px 8px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.price {
+  color: #38bdf8;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* BUTTON */
+.btn {
+  padding: 8px 14px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 6px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #020617;
+  margin-top: 30px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #020617;
+    flex-direction: column;
+    width: 220px;
+    padding: 15px;
+    display: none;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 10px 0;
+    font-size: 14px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>MadameDataIT</h1>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav id="menu">
+    <a href="index.html">Accueil</a>
+    <a href="assistance.html">🛠️ Assistance</a>
+    <a href="sites.html">🌐 Sites Web</a>
+    <a href="digitalstore.html">💰 Digital Store</a>
+    <a href="templates.html">💻 Templates</a>
+    <a href="automatisation.html">⚙️ Automatisation</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h2>⚙️ Automatise ton travail avec Python</h2>
+  <p>Scripts prêts à utiliser pour gagner du temps et supprimer les tâches répétitives</p>
+</div>
+
+<section class="section">
+
+  <div class="cards">
+
+    <div class="card">
+      <span class="tag">Excel</span>
+      <h3>📊 Automation Excel</h3>
+      <p>Nettoyage + génération automatique de rapports</p>
+      <div class="price-row">
+        <div class="price">25€</div>
+        <a class="btn" href="mailto:tonemail@gmail.com?subject=Achat%20Excel%20Automation">Acheter</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="tag">Files</span>
+      <h3>📁 Organisation automatique</h3>
+      <p>Trie automatique des fichiers PC</p>
+      <div class="price-row">
+        <div class="price">15€</div>
+        <a class="btn" href="mailto:tonemail@gmail.com?subject=Achat%20File%20Organizer">Acheter</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="tag">Web</span>
+      <h3>🌐 Web Scraping</h3>
+      <p>Récupère données sites web automatiquement</p>
+      <div class="price-row">
+        <div class="price">35€</div>
+        <a class="btn" href="mailto:tonemail@gmail.com?subject=Achat%20Scraping">Acheter</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="tag">Email</span>
+      <h3>📧 Emails automatiques</h3>
+      <p>Envoi et réponses automatiques</p>
+      <div class="price-row">
+        <div class="price">20€</div>
+        <a class="btn" href="mailto:tonemail@gmail.com?subject=Achat%20Email%20Automation">Acheter</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="tag">Report</span>
+      <h3>📊 Reporting automatique</h3>
+      <p>PDF + rapports générés automatiquement</p>
+      <div class="price-row">
+        <div class="price">30€</div>
+        <a class="btn" href="mailto:tonemail@gmail.com?subject=Achat%20Reporting">Acheter</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="tag">Bot</span>
+      <h3>🤖 Mini bot Python</h3>
+      <p>Alertes et monitoring automatique</p>
+      <div class="price-row">
+        <div class="price">45€</div>
+        <a class="btn" href="mailto:tonemail@gmail.com?subject=Achat%20Bot%20Python">Acheter</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 MadameDataIT</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
