@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assistance - MadameDataIT</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #020617;
+  position: sticky;
+  top: 0;
+}
+
+header h1 {
+  margin: 0;
+  color: #38bdf8;
+  font-size: 16px;
+}
+
+/* BURGER */
+.menu-toggle {
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #020617;
+    flex-direction: column;
+    width: 220px;
+    padding: 15px;
+    display: none;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 10px 0;
+    font-size: 14px;
+  }
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 25px 20px 10px;
+}
+
+.hero h2 {
+  font-size: 22px;
+}
+
+.hero p {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* SECTION */
+.section {
+  padding: 10px 20px 20px;
+  text-align: center;
+}
+
+/* OFFRES */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 15px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.card {
+  background: #020617;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.price {
+  color: #38bdf8;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* BUTTON */
+.btn {
+  margin-top: 10px;
+  padding: 10px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 6px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* CONTACT */
+.contact {
+  margin-top: 30px;
+}
+
+.contact a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #020617;
+  margin-top: 30px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>MadameDataIT</h1>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav id="menu">
+    <a href="index.html">Accueil</a>
+    <a href="assistance.html">🛠️ Assistance</a>
+    <a href="sites.html">🌐 Sites Web</a>
+    <a href="formations.html">📚 Formations</a>
+    <a href="templates.html">💻 Templates</a>
+    <a href="automatisation.html">⚙️ Automatisation</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h2>🛠️ Assistance informatique à distance</h2>
+  <p>Je résous vos problèmes rapidement sans déplacement</p>
+</div>
+
+<section class="section">
+  <h2>🔥 Offres disponibles</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>⚡ Dépannage rapide</h3>
+      <p>Résolution de bugs, erreurs, lenteurs</p>
+      <div class="price">20€</div>
+    </div>
+
+    <div class="card">
+      <h3>💻 Installation logiciels</h3>
+      <p>Installation + configuration complète</p>
+      <div class="price">25€</div>
+    </div>
+
+    <div class="card">
+      <h3>🔒 Sécurité & nettoyage</h3>
+      <p>Virus, optimisation, nettoyage PC</p>
+      <div class="price">30€</div>
+    </div>
+
+    <div class="card">
+      <h3>⚙️ Configuration système</h3>
+      <p>Emails, imprimantes, paramètres</p>
+      <div class="price">25€</div>
+    </div>
+
+    <div class="card">
+      <h3>📚 Aide & formation</h3>
+      <p>Apprendre à utiliser votre ordinateur</p>
+      <div class="price">20€</div>
+    </div>
+
+    <div class="card">
+      <h3>🌐 Assistance web</h3>
+      <p>Problèmes de site, bugs, modifications rapides</p>
+      <div class="price">30€</div>
+    </div>
+
+  </div>
+
+  <div class="contact">
+    <h3>📩 Me contacter</h3>
+    <p>Expliquez votre problème par email :</p>
+
+    <!-- REMPLACE TON EMAIL ICI -->
+    <a href="bhlitdataservices@gmail.com">👉 Envoyer un email</a>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 MadameDataIT</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
