@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MadameDataIT</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
   <style>
@@ -14,7 +13,6 @@ body {
   font-family: 'Poppins', sans-serif;
   background: #0f172a;
   color: white;
-  line-height: 1.4;
 }
 
 /* HEADER */
@@ -22,7 +20,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 15px;
   background: #020617;
   position: sticky;
   top: 0;
@@ -34,10 +32,21 @@ header h1 {
   font-size: 16px;
 }
 
+/* BURGER */
+.menu-toggle {
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
 /* NAV */
+nav {
+  display: flex;
+  gap: 15px;
+}
+
 nav a {
   color: white;
-  margin-left: 10px;
   text-decoration: none;
   font-size: 12px;
   opacity: 0.8;
@@ -48,21 +57,47 @@ nav a:hover {
   color: #38bdf8;
 }
 
+/* MOBILE */
+@media (max-width: 700px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #020617;
+    flex-direction: column;
+    width: 200px;
+    padding: 15px;
+    display: none;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 10px 0;
+    font-size: 14px;
+  }
+}
+
 /* HERO */
 .hero {
   text-align: center;
-  padding: 20px 10px;
+  padding: 20px;
 }
 
 .hero h2 {
   font-size: 22px;
-  margin-bottom: 5px 0;
 }
 
 .hero p {
   font-size: 13px;
   color: #94a3b8;
-  margin: 5px 0;
 }
 
 /* BUTTON */
@@ -75,16 +110,11 @@ nav a:hover {
   color: black;
   cursor: pointer;
   font-weight: bold;
-  transition: 0.2s;
-}
-
-.btn:hover {
-  transform: scale(1.05);
 }
 
 /* SECTION */
 .section {
-  padding: 20px &0px;
+  padding: 20px 0;
   text-align: center;
 }
 
@@ -101,12 +131,6 @@ nav a:hover {
   background: #020617;
   padding: 12px;
   border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.3);
-  transition: 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
 }
 
 /* FOOTER */
@@ -115,47 +139,35 @@ footer {
   padding: 8px;
   background: #020617;
   margin-top: 20px;
-  color: #94a3b8;
   font-size: 11px;
 }
-
-/* RESPONSIVE MOBILE OPTIMISÉ */
-@media (max-width: 600px) {
-  nav a {
-    font-size: 10px;
-    margin-left: 5px;
-  }
-
-  .hero h2 {
-    font-size: 18px;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-</style></head>
+</style>
+</head>
 
 <body>
 
 <header>
- <h1>MadameDataIT</h1>
-  <nav>
-   <a href="index.html">Accueil</a>
-   <a href="assistance.html">🛠️ Assistance</a>
-   <a href="sites.html">🌐 Sites Web</a>
-   <a href="formations.html">📚 Formations</a>
-   <a href="templates.html">💻 Templates</a>
-   <a href="automatisation.html">⚙️ Automatisation</a>
+  <h1>MadameDataIT</h1>
+
+  <!-- BURGER -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav id="menu">
+    <a href="index.html">Accueil</a>
+    <a href="assistance.html">🛠️ Assistance</a>
+    <a href="sites.html">🌐 Sites Web</a>
+    <a href="formations.html">📚 Formations</a>
+    <a href="templates.html">💻 Templates</a>
+    <a href="automatisation.html">⚙️ Automatisation</a>
   </nav>
 </header>
 
 <div class="hero">
   <h2>Assistance informatique & création de sites web 💻</h2>
   <p>Solutions rapides pour résoudre vos problèmes ou créer votre site professionnel</p>
-
 </div>
- <section class="section">
+
+<section class="section">
   <h2>🔥 Services disponibles</h2>
 
   <div class="cards">
@@ -197,12 +209,17 @@ footer {
     </div>
 
   </div>
- </div>
-</div>
+</section>
 
 <footer>
   <p>© 2026 MadameDataIT - Tous droits réservés</p>
 </footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
