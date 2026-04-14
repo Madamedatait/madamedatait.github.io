@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sites Web - MadameDataIT</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #020617;
+  position: sticky;
+  top: 0;
+}
+
+header h1 {
+  margin: 0;
+  color: #38bdf8;
+  font-size: 16px;
+}
+
+/* BURGER */
+.menu-toggle {
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+nav a:hover {
+  color: #38bdf8;
+  opacity: 1;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #020617;
+    flex-direction: column;
+    width: 220px;
+    padding: 15px;
+    display: none;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 10px 0;
+    font-size: 14px;
+  }
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 30px 20px 10px;
+}
+
+.hero h2 {
+  font-size: 24px;
+}
+
+.hero p {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* SECTION */
+.section {
+  padding: 10px 20px 30px;
+  text-align: center;
+}
+
+/* OFFRES */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: #020617;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.price {
+  color: #38bdf8;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* BUTTON */
+.btn {
+  margin-top: 10px;
+  padding: 10px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 6px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #020617;
+  margin-top: 30px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>MadameDataIT</h1>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav id="menu">
+    <a href="index.html">Accueil</a>
+    <a href="assistance.html">🛠️ Assistance</a>
+    <a href="sites.html">🌐 Sites Web</a>
+    <a href="formations.html">📚 Formations</a>
+    <a href="templates.html">💻 Templates</a>
+    <a href="automatisation.html">⚙️ Automatisation</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h2>🌐 Création de sites web professionnels</h2>
+  <p>Je crée des sites modernes, rapides et adaptés à ton business</p>
+</div>
+
+<section class="section">
+
+  <h2>🔥 Offres de création</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>💻 Site vitrine simple</h3>
+      <p>1 page moderne pour présenter ton activité</p>
+      <div class="price">80€</div>
+      <button class="btn">Commander</button>
+    </div>
+
+    <div class="card">
+      <h3>🏢 Site professionnel</h3>
+      <p>3 à 5 pages + design complet + responsive</p>
+      <div class="price">150€</div>
+      <button class="btn">Commander</button>
+    </div>
+
+    <div class="card">
+      <h3>🚀 Site business avancé</h3>
+      <p>Formulaire, animations, optimisation SEO</p>
+      <div class="price">250€</div>
+      <button class="btn">Commander</button>
+    </div>
+
+    <div class="card">
+      <h3>🛒 Landing page vente</h3>
+      <p>Page optimisée pour vendre un produit/service</p>
+      <div class="price">120€</div>
+      <button class="btn">Commander</button>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 MadameDataIT</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
