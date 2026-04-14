@@ -104,7 +104,7 @@ nav a:hover {
   text-align: center;
 }
 
-/* OFFRES */
+/* CARDS */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -136,11 +136,13 @@ nav a:hover {
   margin-top: 10px;
   padding: 10px;
   background: #38bdf8;
-  border: none;
   border-radius: 6px;
-  color: black;
+  color: white; /* ✅ corrigé */
   font-weight: bold;
   cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
 }
 
 .btn:hover {
@@ -153,11 +155,7 @@ nav a:hover {
 }
 
 .contact a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #38bdf8;
   text-decoration: none;
-  font-weight: bold;
 }
 
 /* FOOTER */
@@ -240,10 +238,16 @@ footer {
     <h3>📩 Me contacter</h3>
     <p>Expliquez votre problème par email :</p>
 
-    <!-- REMPLACE TON EMAIL ICI -->
-    <a href="mailto:bhlitdataservices@gmail.com?subject=Demande%20MadameDataIT&body=Bonjour,%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20services." class="btn">
-👉 Envoyer un email
+    <a class="btn" href="mailto:bhlitdataservices@gmail.com?subject=Demande%20MadameDataIT&body=Bonjour,%0A%0AJe%20souhaite%20une%20assistance.%0A%0AMon%20problème:%0A-%20Description:%0A-%20Appareil:%0A%0AMerci">
+      📩 Envoyer un email
     </a>
+
+    <br><br>
+
+    <a class="btn" href="https://mail.google.com/mail/?view=cm&to=bhlitdataservices@gmail.com&su=Demande%20MadameDataIT">
+      📧 Ouvrir Gmail
+    </a>
+
   </div>
 
 </section>
