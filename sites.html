@@ -1,264 +1,323 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sites Web - MadameDataIT</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DL3DERR55V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-DL3DERR55V');
-</script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Création de sites web professionnels | MadameDataIT</title>
+  <meta name="description" content="Création de sites web vitrine et e-commerce personnalisés pour entreprises. Design responsive, optimisation SEO et support dédié." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="canonical" href="https://madamedatait.com/sites.html" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Création de sites web professionnels | MadameDataIT" />
+  <meta property="og:description" content="Sites vitrine et e-commerce personnalisés, design responsive, SEO optimisé et support dédié." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://madamedatait.com/sites.html" />
+  <meta property="og:image" content="https://madamedatait.com/og-image-sites.jpg" />
+  
+  <!-- Données structurées JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Création de sites web",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "MadameDataIT"
+    },
+    "areaServed": "France",
+    "url": "https://madamedatait.com/sites.html",
+    "description": "Création de sites web vitrine et e-commerce personnalisés pour entreprises."
+  }
+  </script>
+  
   <style>
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #0f172a;
-  color: white;
-}
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      background: #020617;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 {
+      margin: 0;
+      color: #38bdf8;
+      font-size: 18px;
+    }
+    .menu-toggle {
+      font-size: 22px;
+      cursor: pointer;
+      display: none;
+      user-select: none;
+    }
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      opacity: 0.8;
+      transition: color 0.3s ease, opacity 0.3s ease;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: #38bdf8;
+      opacity: 1;
+      outline: none;
+    }
+    @media (max-width: 700px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #020617;
+        flex-direction: column;
+        width: 220px;
+        padding: 15px;
+        display: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        border-radius: 0 0 0 8px;
+      }
+      nav.active {
+        display: flex;
+      }
+      nav a {
+        padding: 10px 0;
+        font-size: 16px;
+      }
+    }
+    .hero {
+      text-align: center;
+      padding: 30px 15px 20px;
+    }
+    .hero h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #38bdf8;
+    }
+    .hero p {
+      font-size: 16px;
+      color: #94a3b8;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+    .section {
+      padding: 20px 15px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #38bdf8;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .feature-card {
+      background: #020617;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.5);
+      text-align: left;
+    }
+    .feature-card h3 {
+      margin-top: 0;
+      color: #38bdf8;
+      font-size: 20px;
+    }
+    .feature-card p {
+      color: #94a3b8;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .faq dl {
+      text-align: left;
+      color: #cbd5e1;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .faq dt {
+      font-weight: 700;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+      color: #38bdf8;
+    }
+    .faq dd {
+      margin-left: 15px;
+      font-size: 14px;
+      margin-top: 5px;
+      color: #94a3b8;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      background-color: #38bdf8;
+      color: black;
+      font-weight: 700;
+      font-size: 16px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+    .btn:hover,
+    .btn:focus {
+      background-color: #0ea5e9;
+      outline: none;
+      color: black;
+    }
+    footer {
+      text-align: center;
+      padding: 15px 10px;
+      background: #020617;
+      color: #94a3b8;
+      font-size: 13px;
+      margin-top: 40px;
+    }
 
-/* HEADER */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background: #020617;
-  position: sticky;
-  top: 0;
-}
+    /* Social Buttons */   
+    .social-buttons {
+      margin: 10px 0 5px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
 
-header h1 {
-  margin: 0;
-  color: #38bdf8;
-  font-size: 16px;
-}
+    .social-buttons a {
+      color: #38bdf8;
+      font-size: 22px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
 
-/* BURGER */
-.menu-toggle {
-  font-size: 22px;
-  cursor: pointer;
-  display: none;
-}
+    .social-buttons a:hover,
+    .social-buttons a:focus {
+      color: #0ea5e9;
+      outline: none;
+    }
 
-/* NAV */
-nav {
-  display: flex;
-  gap: 15px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 12px;
-  opacity: 0.8;
-}
-
-nav a:hover {
-  color: #38bdf8;
-  opacity: 1;
-}
-
-/* MOBILE */
-@media (max-width: 700px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  nav {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #020617;
-    flex-direction: column;
-    width: 220px;
-    padding: 15px;
-    display: none;
-  }
-
-  nav.active {
-    display: flex;
-  }
-
-  nav a {
-    padding: 10px 0;
-    font-size: 14px;
-  }
-}
-
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 15px 10px 5px;
-}
-
-.hero h2 {
-  font-size: 24px;
-}
-
-.hero p {
-  color: #94a3b8;
-  font-size: 14px;
-}
-
-/* SECTION */
-.section {
-  padding: 5px 10px 20px;
-  text-align: center;
-}
-
-/* OFFRES */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-@media (max-width: 700px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-.card {
-  background: #020617;
-  padding: 15px;
-  border-radius: 10px;
-  transition: 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.price {
-  color: #38bdf8;
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-/* BUTTON */
-.btn {
-  margin-top: 10px;
-  padding: 10px 15px;
-  background: #38bdf8;
-  border-radius: 6px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none; /* ✅ FIX */
-}
-
-.btn:hover {
-  transform: scale(1.05);
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 10px;
-  background: #020617;
-  margin-top: 30px;
-  font-size: 12px;
-  color: #94a3b8;
-}
-</style>
+  </style>
 </head>
-
 <body>
+  <header>
+    <h1>MadameDataIT</h1>
+    <div class="menu-toggle" onclick="toggleMenu()" aria-label="Menu de navigation" role="button" tabindex="0">☰</div>
+    <nav id="menu" role="navigation">
+      <a href="index.html">Accueil</a>
+      <a href="assistance.html">🛠️ Assistance</a>
+      <a href="sites.html">🌐 Sites Web</a>
+      <a href="formations.html">💰 Digital Store</a>
+      <a href="templates.html">💻 Templates</a>
+      <a href="automatisation.html">⚙️ Automatisation</a>
+      <a href="contact.html">📞 Contact</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>MadameDataIT</h1>
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <section class="hero" aria-label="Présentation principale">
+    <h1>Création de sites web professionnels</h1>
+    <p>MadameDataIT conçoit des sites web vitrine et e-commerce personnalisés, adaptés à vos besoins. Profitez d’un design moderne, responsive et optimisé SEO pour booster votre visibilité en ligne.</p>
+    <a href="contact.html" class="btn">Demandez un devis</a>
+  </section>
 
-  <nav id="menu">
-    <a href="index.html">Accueil</a>
-    <a href="assistance.html">🛠️ Assistance</a>
-    <a href="sites.html">🌐 Sites Web</a>
-    <a href="formations.html">💰 Digital Store</a>
-    <a href="templates.html">💻 Templates</a>
-    <a href="automatisation.html">⚙️ Automatisation</a>
-  </nav>
-</header>
-
-<div class="hero">
-  <h2>🌐 Création de sites web professionnels</h2>
-  <p>Je crée des sites modernes, rapides et adaptés à ton business</p>
-</div>
-
-<section class="section">
-
-  <h2>🔥 Offres de création</h2>
-  <p style="font-size:12px; color:#94a3b8;">
-  ✔️ Sites rapides et modernes<br>
-  ✔️ Adaptés mobile / tablette<br>
-  ✔️ Livraison rapide<br>
-  ✔️ Support inclus
-  </p>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>💻 Site vitrine simple</h3>
-      <p>1 page moderne pour présenter ton activité</p>
-      <div class="price">À partir de 80€</div>
-      <a class="btn" href="https://mail.google.com/mail/?view=cm&to=bhlitdataservices@gmail.com&su=Demande%20MadameDataIT">
-🚀 Lancer mon site
-</a>
+  <section class="section">
+    <h2>Nos services de création web</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>Sites vitrines personnalisés</h3>
+        <p>Présentez votre activité avec un site professionnel, clair et attractif, adapté à votre image.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Sites e-commerce</h3>
+        <p>Vendez vos produits en ligne grâce à une boutique sécurisée, simple à gérer et performante.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Design responsive</h3>
+        <p>Votre site s’adapte parfaitement à tous les écrans (mobile, tablette, ordinateur).</p>
+      </div>
+      <div class="feature-card">
+        <h3>Optimisation SEO</h3>
+        <p>Nous optimisons votre site pour améliorer son classement sur Google et générer du trafic qualifié.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Maintenance & support</h3>
+        <p>Un accompagnement régulier pour garantir la sécurité et la mise à jour de votre site.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Formation à la gestion de votre site</h3>
+        <p>Nous vous formons à utiliser et mettre à jour facilement votre site, sans compétences techniques.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>🏢 Site professionnel</h3>
-      <p>3 à 5 pages + design complet + responsive</p>
-      <div class="price">À partir de 150€</div>
-      <a class="btn" href="https://mail.google.com/mail/?view=cm&to=bhlitdataservices@gmail.com&su=Demande%20MadameDataIT">
-🚀 Lancer mon projet
-</a>
-    </div>
+  <section class="section faq" aria-label="Foire aux questions">
+    <h2>❓ Questions fréquentes</h2>
+    <dl>
+      <dt>Quels types de sites web créez-vous ?</dt>
+      <dd>Nous réalisons des sites vitrines, boutiques en ligne, ainsi que des sites sur mesure adaptés à vos besoins.</dd>
 
-    <div class="card">
-      <h3>🚀 Site business avancé</h3>
-      <p>Formulaire, animations, optimisation SEO</p>
-      <div class="price">À partir de 250€</div>
-      <a class="btn" href="https://mail.google.com/mail/?view=cm&to=bhlitdataservices@gmail.com&su=Demande%20MadameDataIT">
-🚀 Créer mon business
-</a>
-    </div>
+      <dt>Combien de temps prend la création d’un site ?</dt>
+      <dd>En général, entre 3 à 6 semaines selon la complexité et vos exigences.</dd>
 
-    <div class="card">
-      <h3>🛒 Landing page vente</h3>
-      <p>Page optimisée pour vendre un produit/service</p>
-      <div class="price">À partir de 120€</div>
-      <a class="btn" href="https://mail.google.com/mail/?view=cm&to=bhlitdataservices@gmail.com&su=Demande%20MadameDataIT">
-🚀 Créer ma page de vente
-</a>
-    </div>
+      <dt>Qu’est-ce que la formation pour gérer un site web ?</dt>
+      <dd>Nous vous proposons une formation personnalisée pour apprendre à modifier vos contenus, gérer vos images, et utiliser les fonctionnalités de votre site en toute autonomie.</dd>
+    </dl>
+  </section>
 
+  <footer>
+  <div class="social-buttons" aria-label="Liens vers réseaux sociaux">
+    <a href="https://www.facebook.com/madamedatait" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#38bdf8" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M22 12a10 10 0 1 0-11.5 9.87v-6.99h-2.3v-2.88h2.3v-2.2c0-2.28 1.36-3.54 3.44-3.54.99 0 2.02.18 2.02.18v2.22h-1.14c-1.12 0-1.47.7-1.47 1.42v1.92h2.5l-.4 2.88h-2.1v6.99A10 10 0 0 0 22 12z"/>
+      </svg>
+    </a>
+    <a href="https://www.instagram.com/madamedatait" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#38bdf8" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.75-.88a1.12 1.12 0 1 1 0 2.25 1.12 1.12 0 0 1 0-2.25z"/>
+      </svg>
+    </a>
+    <a href="https://www.tiktok.com/@madamedatait" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok" style="display:inline-block; vertical-align:middle;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24" fill="#38bdf8" aria-hidden="true">
+        <path d="M448,209.91a210.75,210.75,0,0,1-65.88-10.14v95.52a110.84,110.84,0,1,1-110.84-110.84V0h38.14A173.74,173.74,0,0,0,379.79,73.18,186.81,186.81,0,0,0,448,209.91Z"/>
+      </svg>
+    </a>
   </div>
-
-</section>
-
-<footer>
-  <p>© 2026 MadameDataIT</p>
+  <p>© 2026 MadameDataIT - Tous droits réservés</p>
 </footer>
 
-<script>
-function toggleMenu() {
-  document.getElementById("menu").classList.toggle("active");
-}
-</script>
-
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('active');
+    }
+    // Support clavier pour menu burger
+    document.querySelector('.menu-toggle').addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMenu();
+      }
+    });
+  </script>
 </body>
 </html>
