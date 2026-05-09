@@ -3,20 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="MadameDataIT - Assistance informatique et création de sites web professionnels. Solutions rapides et personnalisées pour votre entreprise." />
-  <title>MadameDataIT</title>
-
+  <title>MadameDataIT - Assistance informatique & création de sites web professionnels</title>
+  <meta name="description" content="Assistance informatique, dépannage PC rapide et création de sites web professionnels. Solutions personnalisées pour entreprises et particuliers en France." />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="canonical" href="https://tonsite.com/" />
+ 
+  <!-- Open Graph -->
+  <meta property="og:title" content="MadameDataIT - Assistance informatique & création de sites web professionnels" />
+  <meta property="og:description" content="Dépannage PC rapide et création de sites web professionnels. Solutions personnalisées pour entreprises et particuliers en France." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tonsite.com/" />
+  <meta property="og:image" content="https://tonsite.com/og-image.jpg" />
+  
+  <!-- Données structurées JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "MadameDataIT",
+    "description": "Assistance informatique et création de sites web professionnels.",
+    "url": "https://tonsite.com",
+    "areaServed": "France"
+  }
+  </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DL3DERR55V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DL3DERR55V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-DL3DERR55V');
-</script>
+    gtag('config', 'G-DL3DERR55V');
+  </script>
 
   <style>
     body {
@@ -108,9 +128,10 @@
       padding: 30px 15px 20px;
     }
 
-    .hero h2 {
+    .hero h1 {
       font-size: 28px;
       margin-bottom: 10px;
+      color: #38bdf8;
     }
 
     .hero p {
@@ -119,7 +140,7 @@
       max-width: 600px;
       margin: 0 auto 20px;
     }
-
+    
     /* BUTTON */
     .btn {
       margin-top: 15px;
@@ -149,6 +170,7 @@
     .section h2 {
       font-size: 24px;
       margin-bottom: 20px;
+      color: #38bdf8;
     }
 
     /* CARDS */
@@ -180,6 +202,29 @@
 
     .card p {
       font-size: 14px;
+      color: #94a3b8;
+    }
+
+    /* FAQ */
+    dl {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: left;
+      color: #cbd5e1;
+    }
+
+    dt {
+      font-weight: 700;
+      margin-top: 20px;
+      font-size: 16px;
+      color: #38bdf8;
+      cursor: pointer;
+    }
+
+    dd {
+      margin: 5px 0 0 15px;
+      font-size: 14px;
+      line-height: 1.5;
       color: #94a3b8;
     }
 
@@ -215,7 +260,6 @@
     }
   </style>
 </head>
-
 <body>
   <header>
     <h1>MadameDataIT</h1>
@@ -230,12 +274,15 @@
       <a href="formations.html">💰 Digital Store</a>
       <a href="templates.html">💻 Templates</a>
       <a href="automatisation.html">⚙️ Automatisation</a>
+      <a href="contact.html">📞 Contact</a>
     </nav>
   </header>
 
   <section class="hero" aria-label="Présentation principale">
-    <h2>Assistance informatique & création de sites web 💻</h2>
-    <p>Solutions rapides pour résoudre vos problèmes ou créer votre site professionnel</p>
+    <h1>Assistance informatique & création de sites web 💻</h1>
+    <p> MadameDataIT vous accompagne pour le dépannage informatique rapide, la création de sites web professionnels,
+      et l’automatisation de vos tâches numériques. Nous offrons des solutions personnalisées pour entreprises et particuliers
+      partout en France.</p>
     <button class="btn" onclick="location.href='contact.html'">Contactez-nous</button>
   </section>
 
@@ -281,26 +328,40 @@
     </div>
   </section>
 
+  <section class="section" aria-label="Foire aux questions">
+    <h2>❓ Questions fréquentes</h2>
+    <dl>
+      <dt>Quels types d’assistance informatique proposez-vous ?</dt>
+      <dd>Nous offrons dépannage, installation, configuration de PC, et support technique rapide pour particuliers et entreprises.</dd>
+
+      <dt>Combien de temps prend la création d’un site web professionnel ?</dt>
+      <dd>Le délai dépend du projet, mais généralement entre 2 à 4 semaines selon vos besoins spécifiques.</dd>
+
+      <dt>Proposez-vous des formations pour débutants ?</dt>
+      <dd>Oui, notre Digital Store propose des formations pratiques en SQL, Python, développement web et plus encore.</dd>
+    </dl>
+  </section>
+
   <footer>
-  <div class="social-buttons" aria-label="Liens vers réseaux sociaux">
-    <a href="https://www.facebook.com/madamedatait" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#38bdf8" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M22 12a10 10 0 1 0-11.5 9.87v-6.99h-2.3v-2.88h2.3v-2.2c0-2.28 1.36-3.54 3.44-3.54.99 0 2.02.18 2.02.18v2.22h-1.14c-1.12 0-1.47.7-1.47 1.42v1.92h2.5l-.4 2.88h-2.1v6.99A10 10 0 0 0 22 12z"/>
-      </svg>
-    </a>
-    <a href="https://www.instagram.com/madamedatait" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#38bdf8" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.75-.88a1.12 1.12 0 1 1 0 2.25 1.12 1.12 0 0 1 0-2.25z"/>
-      </svg>
-    </a>
-    <a href="https://www.tiktok.com/@madamedata.it" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok" style="display:inline-block; vertical-align:middle;">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24" fill="#38bdf8" aria-hidden="true">
-    <path d="M448,209.91a210.75,210.75,0,0,1-65.88-10.14v95.52a110.84,110.84,0,1,1-110.84-110.84V0h38.14A173.74,173.74,0,0,0,379.79,73.18,186.81,186.81,0,0,0,448,209.91Z"/>
-  </svg>
-</a>
-  </div>
-  <p>© 2026 MadameDataIT - Tous droits réservés</p>
-</footer>
+    <div class="social-buttons" aria-label="Liens vers réseaux sociaux">
+      <a href="https://www.facebook.com/madamedatait" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#38bdf8" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M22 12a10 10 0 1 0-11.5 9.87v-6.99h-2.3v-2.88h2.3v-2.2c0-2.28 1.36-3.54 3.44-3.54.99 0 2.02.18 2.02.18v2.22h-1.14c-1.12 0-1.47.7-1.47 1.42v1.92h2.5l-.4 2.88h-2.1v6.99A10 10 0 0 0 22 12z"/>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/madamedatait" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#38bdf8" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.75-.88a1.12 1.12 0 1 1 0 2.25 1.12 1.12 0 0 1 0-2.25z"/>
+        </svg>
+      </a>
+      <a href="https://www.tiktok.com/@madamedatait" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok" style="display:inline-block; vertical-align:middle;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24" fill="#38bdf8" aria-hidden="true">
+          <path d="M448,209.91a210.75,210.75,0,0,1-65.88-10.14v95.52a110.84,110.84,0,1,1-110.84-110.84V0h38.14A173.74,173.74,0,0,0,379.79,73.18,186.81,186.81,0,0,0,448,209.91Z"/>
+        </svg>
+      </a>
+    </div>
+    <p>© 2026 MadameDataIT - Tous droits réservés</p>
+  </footer>
 
   <script>
     function toggleMenu() {
