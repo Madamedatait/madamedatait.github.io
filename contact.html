@@ -1,516 +1,443 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MadameDataIT - Assistance informatique & création de sites web professionnels</title>
-  <meta name="description" content="Assistance informatique, dépannage PC rapide et création de sites web professionnels. Solutions personnalisées pour entreprises et particuliers en France." />
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    MadameDataIT - Assistance informatique & création de sites web professionnels
+  </title>
+
+  <meta
+    name="description"
+    content="Assistance informatique, dépannage PC rapide et création de sites web professionnels. Solutions personnalisées pour entreprises et particuliers en France."
+  >
+
+  <!-- CANONICAL -->
+
   <link
-  rel="preload"
-  href="fonts.css"
-  as="style"
-  onload="this.onload=null;this.rel='stylesheet'"
->
+    rel="canonical"
+    href="https://madamedatait.com/contact.html"
+  >
 
-<noscript>
-  <link rel="stylesheet" href="fonts.css">
-</noscript>
-  <link rel="icon" href="favicon.ico" />
+  <!-- FAVICON -->
 
-  <!-- Balise canonique vers la racine -->
-  <link rel="canonical" href="https://madamedatait.com/contact.html" />
+  <link rel="icon" href="favicon.ico">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="MadameDataIT - Assistance informatique & création de sites web professionnels" />
-  <meta property="og:description" content="Dépannage PC rapide et création de sites web professionnels. Solutions personnalisées pour entreprises et particuliers en France." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://madamedatait.com/contact.html" />
-  <meta property="og:image" content="https://madamedatait.com/og-image.jpg" />
+  <!-- PRELOAD IMAGE LCP -->
 
-  <!-- Données structurées JSON-LD -->
+  <link
+    rel="preload"
+    as="image"
+    href="./images/map.webp"
+    fetchpriority="high"
+  >
+
+  <!-- CSS PRINCIPAL -->
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <!-- FONTS -->
+
+  <link
+    rel="preload"
+    href="fonts.css"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  >
+
+  <noscript>
+    <link rel="stylesheet" href="fonts.css">
+  </noscript>
+
+  <!-- OPEN GRAPH -->
+
+  <meta
+    property="og:title"
+    content="MadameDataIT - Assistance informatique & création de sites web professionnels"
+  >
+
+  <meta
+    property="og:description"
+    content="Dépannage PC rapide et création de sites web professionnels."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:url"
+    content="https://madamedatait.com/contact.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://madamedatait.com/og-image.jpg"
+  >
+
+  <!-- JSON-LD -->
+
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "MadameDataIT",
-    "description": "Assistance informatique et création de sites web professionnels.",
-    "url": "https://madamedatait.com/contact.html",
-    "areaServed": "France"
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"MadameDataIT",
+    "url":"https://madamedatait.com",
+    "image":"https://madamedatait.com/og-image.jpg",
+    "description":"Assistance informatique et création de sites web professionnels",
+    "areaServed":"France",
+    "email":"bhlitdataservices@gmail.com",
+    "sameAs":[
+      "https://www.facebook.com/madamedatait",
+      "https://www.instagram.com/madamedatait",
+      "https://www.tiktok.com/@madamedatait"
+    ]
   }
   </script>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DL3DERR55V"></script>
+  <!-- ANALYTICS DIFFÉRÉ -->
+
   <script>
+
+  function loadAnalytics(){
+
+    if(window.analyticsLoaded) return;
+
+    window.analyticsLoaded = true;
+
+    const s = document.createElement('script');
+
+    s.src =
+      'https://www.googletagmanager.com/gtag/js?id=G-DL3DERR55V';
+
+    s.async = true;
+
+    document.head.appendChild(s);
+
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DL3DERR55V');
-  </script>
 
-  <!-- Redirection client de /index.html vers / -->
-  <script>
-    if (window.location.pathname.endsWith('index.html')) {
-      window.location.replace('/');
+    function gtag(){
+      dataLayer.push(arguments);
     }
+
+    window.gtag = gtag;
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-DL3DERR55V');
+  }
+
+  window.addEventListener(
+    'scroll',
+    loadAnalytics,
+    { once:true }
+  );
+
+  window.addEventListener(
+    'click',
+    loadAnalytics,
+    { once:true }
+  );
+
   </script>
 
-  <style>
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #0f172a;
-  color: white;
-}
+  <!-- REDIRECTION -->
 
-/* HEADER */
+  <script>
 
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px;
-  background:#020617;
-  position:sticky;
-  top:0;
-}
+  if(window.location.pathname.endsWith('index.html')){
 
-header h1{
-  margin: 0;
-  color:#38bdf8;
-  font-size:18px;
-}
-
-/* BURGER */
-
-.menu-toggle{
-  display:none;
-  font-size:22px;
-  cursor:pointer;
-}
-
-/* NAV */
-
-nav{
-  display:flex;
-  gap:15px;
-}
-
-nav a{
-  color:white;
-  text-decoration:none;
-  font-size:14px;
-  opacity:0.8;
-  transition:  color 0.3s ease, opacity 0.3s ease;
-}
-
-nav a:hover{
-  color:#38bdf8;
-}
-
-/* HERO */
-
-.hero{
-  text-align:center;
-  padding:30px 15px 20px;
-}
-
-.hero h2{
-  font-size:28px;
-  color:#38bdf8;
-  margin-bottom:10px;
-}
-
-.hero p {
-  font-size: 16px;
-  color: #94a3b8;
-  max-width: 600px;
-  margin: 0 auto 20px;
-}
-
-/* CONTACT */
-
-.contact-section{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-}
-
-.contact-card{
-  background:#020617;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 4px 20px rgba(0,0,0,0.35);
-}
-
-.contact-card h3{
-  margin-bottom:30px;
-  color:#38bdf8;
-  font-size:22px;
-}
-
-.contact-info{
-  margin-bottom:25px;
-}
-
-.contact-info strong{
-  display:block;
-  margin-bottom:8px;
-  color:white;
-}
-
-.contact-info p,
-.contact-info a{
-  color:#94a3b8;
-  text-decoration:none;
-  line-height:1.7;
-}
-
-/* MAP */
-
-.map-container{
-  margin-top:20px;
-  border-radius:12px;
-  overflow:hidden;
-}
-
-iframe{
-  display:block;
-}
-
-/* FORM */
-
-form{
-  display:flex;
-  flex-direction:column;
-  gap:15px;
-}
-
-input,
-textarea{
-  width:100%;
-  padding:14px;
-  border:none;
-  border-radius:8px;
-  background:#0f172a;
-  color:white;
-  font-family:'Poppins',sans-serif;
-}
-
-input:focus,
-textarea:focus{
-  outline:2px solid #38bdf8;
-}
-
-textarea{
-  min-height:140px;
-  resize:vertical;
-}
-
-/* BUTTON */
-
-.btn{
-  background:#38bdf8;
-  color:white;
-  border:none;
-  padding:14px;
-  border-radius:8px;
-  font-weight:bold;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.btn:hover{
-  background:#0ea5e9;
-  transform:translateY(-2px);
-}
-
-/* FOOTER */
-
-footer{
-  text-align:center;
-  padding:20px;
-  background:#020617;
-  margin-top:30px;
-  color:#94a3b8;
-  font-size:14px;
-}
-
-/* SOCIAL */
-
-.social-buttons{
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  margin-bottom:10px;
-}
-
-.social-buttons a{
-  color:#38bdf8;
-  transition:0.3s;
-}
-
-.social-buttons a:hover{
-  color:#0ea5e9;
-}
-
-/* MOBILE */
-
-@media(max-width:700px){
-
-  .menu-toggle{
-    display:block;
+    window.location.replace('/');
   }
 
-  nav{
-    position:absolute;
-    top:60px;
-    right:0;
-    background:#020617;
-    flex-direction:column;
-    width:220px;
-    padding:15px;
-    display:none;
-  }
+  </script>
 
-  nav.active{
-    display:flex;
-  }
-
-  nav a{
-    padding:10px 0;
-    font-size: 16px;
-  }
-
-  .contact-section{
-    grid-template-columns:1fr;
-  }
-
-  .hero h2{
-    font-size:28px;
-  }
-}
-  </style>
 </head>
 
 <body>
 
-<header>
+  <!-- HEADER -->
 
-  <h1>MadameDataIT</h1>
+  <header>
 
-  <!-- BURGER -->
+    <h1>MadameDataIT</h1>
 
-  <div
-    class="menu-toggle"
-    onclick="toggleMenu()"
-    aria-label="Menu de navigation"
-    role="button"
-    tabindex="0"
-  >
-    ☰
-  </div>
+    <!-- MENU BURGER -->
 
-  <nav id="menu">
+    <div
+      class="menu-toggle"
+      onclick="toggleMenu()"
+      aria-label="Menu de navigation"
+      role="button"
+      tabindex="0"
+    >
+      ☰
+    </div>
 
-    <a href="/">Accueil</a>
+    <!-- NAV -->
 
-    <a href="assistance.html">🛠️ Assistance</a>
+    <nav id="menu">
 
-    <a href="sites.html">🌐 Sites Web</a>
+      <a href="/">Accueil</a>
 
-    <a href="formations.html">💰 Digital Store</a>
+      <a href="assistance.html">
+        🛠️ Assistance
+      </a>
 
-    <a href="templates.html">💻 Templates</a>
+      <a href="sites.html">
+        🌐 Sites Web
+      </a>
 
-    <a href="automatisation.html">⚙️ Automatisation</a>
+      <a href="formations.html">
+        💰 Digital Store
+      </a>
 
-    <a href="contact.html">📞 Contact</a>
+      <a href="templates.html">
+        💻 Templates
+      </a>
 
-  </nav>
+      <a href="automatisation.html">
+        ⚙️ Automatisation
+      </a>
 
-</header>
+      <a href="contact.html">
+        📞 Contact
+      </a>
 
-<!-- HERO -->
+    </nav>
 
-<section class="hero">
+  </header>
 
-  <h2>📞 Contact & devis gratuit</h2>
+  <!-- HERO -->
 
-  <p>
-    Besoin d’une assistance informatique, d’un site web professionnel
-    ou d’une solution digitale personnalisée ?
-    Contactez MadameDataIT pour une réponse rapide.
-  </p>
+  <section class="hero">
 
-</section>
+    <h2>
+      📞 Contact & devis gratuit
+    </h2>
 
-<!-- CONTACT -->
+    <p>
+      Besoin d’une assistance informatique,
+      d’un site web professionnel
+      ou d’une solution digitale personnalisée ?
+      Contactez MadameDataIT pour une réponse rapide.
+    </p>
 
-<section class="contact-section">
+  </section>
 
-  <!-- INFOS -->
+  <!-- CONTACT -->
 
-  <div class="contact-card">
+  <section class="contact-section">
 
-    <h3>Informations</h3>
+    <!-- INFOS -->
 
-    <div class="contact-info">
+    <div class="contact-card">
 
-      <strong>Email</strong>
+      <h3>Informations</h3>
 
-      <a href="mailto:bhlitdataservices@gmail.com">
-        bhlitdataservices@gmail.com
+      <div class="contact-info">
+
+        <strong>Email</strong>
+
+        <a href="mailto:bhlitdataservices@gmail.com">
+          bhlitdataservices@gmail.com
+        </a>
+
+      </div>
+
+      <div class="contact-info">
+
+        <strong>Services</strong>
+
+        <p>
+          Assistance informatique<br>
+          Création de sites web<br>
+          Automatisation<br>
+          Solutions digitales
+        </p>
+
+      </div>
+
+      <div class="contact-info">
+
+        <strong>Zone</strong>
+
+        <p>France - à distance</p>
+
+      </div>
+
+      <!-- MAP -->
+
+      <div class="map-container">
+
+        <img
+          src="./images/map.webp"
+          alt="Carte de localisation"
+          width="600"
+          height="400"
+          fetchpriority="high"
+          decoding="async"
+        >
+
+      </div>
+
+    </div>
+
+    <!-- FORM -->
+
+    <div class="contact-card">
+
+      <h3>Envoyer un message</h3>
+
+      <form
+        action="https://formsubmit.co/297e0367bc1b0ec1c1fce53de8c9df88"
+        method="POST"
+      >
+
+        <input
+          type="hidden"
+          name="_captcha"
+          value="false"
+        >
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="Nouveau message MadameDataIT"
+        >
+
+        <input
+          type="hidden"
+          name="_template"
+          value="table"
+        >
+
+        <input
+          type="hidden"
+          name="_next"
+          value="https://madamedatait.com/merci.html"
+        >
+
+        <input
+          type="text"
+          name="nom"
+          placeholder="Votre nom"
+          autocomplete="name"
+          required
+        >
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Votre email"
+          autocomplete="email"
+          required
+        >
+
+        <input
+          type="text"
+          name="sujet"
+          placeholder="Sujet"
+          required
+        >
+
+        <textarea
+          name="message"
+          placeholder="Votre message"
+          required
+        ></textarea>
+
+        <button
+          type="submit"
+          class="btn"
+        >
+          Envoyer le message
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="social-buttons">
+
+      <a
+        href="https://www.facebook.com/madamedatait"
+        target="_blank"
+        rel="noopener"
+      >
+        Facebook
+      </a>
+
+      <a
+        href="https://www.instagram.com/madamedatait"
+        target="_blank"
+        rel="noopener"
+      >
+        Instagram
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@madamedatait"
+        target="_blank"
+        rel="noopener"
+      >
+        TikTok
       </a>
 
     </div>
 
-    <div class="contact-info">
+    <p>
+      © 2026 MadameDataIT - Tous droits réservés
+    </p>
 
-      <strong>Services</strong>
+  </footer>
 
-      <p>
-        Assistance informatique<br>
-        Création de sites web<br>
-        Automatisation<br>
-        Solutions digitales
-      </p>
+  <!-- SCRIPT MENU -->
 
-    </div>
+  <script>
 
-    <div class="contact-info">
+  function toggleMenu(){
 
-      <strong>Zone</strong>
-
-      <p>France - à distance</p>
-
-    </div>
-
-    <!-- MAP -->
-    <img
-      src="./images/map.webp"
-      alt="Carte de localisation"
-      loading="lazy"
-      width="600"
-      height="400"
-    >
-  </a>
-</div>
-
-  <!-- FORM -->
-
-  <div class="contact-card">
-
-    <h3>Envoyer un message</h3>
-
-    <form action="https://formsubmit.co/297e0367bc1b0ec1c1fce53de8c9df88" method="POST">
-
-      <input type="hidden" name="_captcha" value="false">
-
-      <input type="hidden" name="_subject" value="Nouveau message MadameDataIT">
-
-      <input type="hidden" name="_template" value="table">
-
-      <input type="hidden" name="_next" value="https://madamedatait.com/merci.html">
-
-      <input
-        type="text"
-        name="nom"
-        placeholder="Votre nom"
-        autocomplete="name"
-        required
-      >
-
-      <input
-        type="email"
-        name="email"
-        placeholder="Votre email"
-        autocomplete="email"
-        required
-      >
-
-      <input
-        type="text"
-        name="sujet"
-        placeholder="Sujet"
-        required
-      >
-
-      <textarea
-        name="message"
-        placeholder="Votre message"
-        required
-      ></textarea>
-
-      <button type="submit" class="btn">
-        Envoyer le message
-      </button>
-
-    </form>
-
-  </div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-  <div class="social-buttons">
-
-    <a
-      href="https://www.facebook.com/madamedatait"
-      target="_blank"
-      rel="noopener"
-    >
-      Facebook
-    </a>
-
-    <a
-      href="https://www.instagram.com/madamedatait"
-      target="_blank"
-      rel="noopener"
-    >
-      Instagram
-    </a>
-
-    <a
-      href="https://www.tiktok.com/@madamedatait"
-      target="_blank"
-      rel="noopener"
-    >
-      TikTok
-    </a>
-
-  </div>
-
-  <p>© 2026 MadameDataIT - Tous droits réservés</p>
-
-</footer>
-
-<script>
-
-function toggleMenu(){
-  document.getElementById('menu').classList.toggle('active');
-}
-
-/* clavier menu burger */
-
-document.querySelector('.menu-toggle')
-.addEventListener('keydown', function(e){
-
-  if(e.key === 'Enter' || e.key === ' '){
-
-    e.preventDefault();
-
-    toggleMenu();
+    document
+      .getElementById('menu')
+      .classList
+      .toggle('active');
   }
-});
 
-</script>
+  document
+    .querySelector('.menu-toggle')
+    .addEventListener('keydown', function(e){
+
+      if(
+        e.key === 'Enter'
+        ||
+        e.key === ' '
+      ){
+
+        e.preventDefault();
+
+        toggleMenu();
+      }
+    });
+
+  </script>
 
 </body>
 </html>
