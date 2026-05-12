@@ -16,15 +16,18 @@
 
   <link rel="icon" href="favicon.ico">
 
-  <!-- SEO / PERF -->
-  <link rel="preload" href="style.css" as="style">
+  <!-- CSS PRINCIPAL -->
   <link rel="stylesheet" href="style.css">
 
-  <link rel="preload" href="fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="fonts.css"></noscript>
+  <!-- FONTS (stable, sans CLS) -->
+  <link rel="stylesheet" href="fonts.css">
 
-  <!-- IMAGE LCP PRELOAD -->
-  <link rel="preload" as="image" href="./images/map.webp">
+  <!-- IMAGE LCP -->
+  <link 
+    rel="preload" 
+    as="image" 
+    href="./images/map.webp"
+  >
 
   <!-- OPEN GRAPH -->
   <meta property="og:title" content="MadameDataIT - Assistance informatique & création de sites web professionnels">
@@ -98,6 +101,7 @@
     loading="eager"
     decoding="async"
     fetchpriority="high">
+    style="display:block;"
 </div>
 
     </div>
