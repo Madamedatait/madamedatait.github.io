@@ -5,7 +5,8 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="theme-color" content="#020617">
+  
   <title>
     MadameDataIT - Assistance informatique & création de sites web professionnels
   </title>
@@ -18,9 +19,21 @@
 
   <!-- CSS PRINCIPAL -->
   <link rel="stylesheet" href="style.css">
+  <link
+  rel="preload"
+  href="./poppins-v24-latin/poppins-v24-latin-regular.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
+>
 
-  <!-- FONTS (stable, sans CLS) -->
-  <link rel="stylesheet" href="fonts.css">
+<link
+  rel="preload"
+  href="./poppins-v24-latin/poppins-v24-latin-700.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
+>
 
   <!-- IMAGE LCP -->
   <link 
@@ -58,9 +71,9 @@
 
   <h1>MadameDataIT</h1>
 
-  <div class="menu-toggle" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Menu">
+  <button class="menu-toggle" onclick="toggleMenu()" aria-label="Ouvrir le menu">
     ☰
-  </div>
+  </button>
 
   <nav id="menu">
     <a href="/">Accueil</a>
