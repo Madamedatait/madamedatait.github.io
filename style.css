@@ -151,6 +151,7 @@ nav a:hover{
   height:auto;
   display:block;
   border-radius:12px;
+  object-fit:cover;
 }
 
 /* ===================================
