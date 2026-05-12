@@ -4,90 +4,36 @@
 <head>
 
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
     MadameDataIT - Assistance informatique & création de sites web professionnels
   </title>
 
-  <meta
-    name="description"
-    content="Assistance informatique, dépannage PC rapide et création de sites web professionnels. Solutions personnalisées pour entreprises et particuliers en France."
-  >
+  <meta name="description" content="Assistance informatique, dépannage PC rapide et création de sites web professionnels. Solutions personnalisées pour entreprises et particuliers en France.">
 
-  <!-- CANONICAL -->
-
-  <link
-    rel="canonical"
-    href="https://madamedatait.com/contact.html"
-  >
-
-  <!-- FAVICON -->
+  <link rel="canonical" href="https://madamedatait.com/contact.html">
 
   <link rel="icon" href="favicon.ico">
 
-  <!-- PRELOAD IMAGE LCP -->
+  <!-- SEO / PERF -->
+  <link rel="preload" href="style.css" as="style">
+  <link rel="stylesheet" href="style.css">
 
-  <link
-    rel="preload"
-    as="image"
-    href="./images/map.webp"
-    fetchpriority="high"
-  >
+  <link rel="preload" href="fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="fonts.css"></noscript>
 
-  <!-- CSS PRINCIPAL -->
-
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
-
-  <!-- FONTS -->
-
-  <link
-    rel="preload"
-    href="fonts.css"
-    as="style"
-    onload="this.onload=null;this.rel='stylesheet'"
-  >
-
-  <noscript>
-    <link rel="stylesheet" href="fonts.css">
-  </noscript>
+  <!-- IMAGE LCP PRELOAD -->
+  <link rel="preload" as="image" href="./images/map.webp">
 
   <!-- OPEN GRAPH -->
+  <meta property="og:title" content="MadameDataIT - Assistance informatique & création de sites web professionnels">
+  <meta property="og:description" content="Dépannage PC rapide et création de sites web professionnels.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://madamedatait.com/contact.html">
+  <meta property="og:image" content="https://madamedatait.com/og-image.jpg">
 
-  <meta
-    property="og:title"
-    content="MadameDataIT - Assistance informatique & création de sites web professionnels"
-  >
-
-  <meta
-    property="og:description"
-    content="Dépannage PC rapide et création de sites web professionnels."
-  >
-
-  <meta
-    property="og:type"
-    content="website"
-  >
-
-  <meta
-    property="og:url"
-    content="https://madamedatait.com/contact.html"
-  >
-
-  <meta
-    property="og:image"
-    content="https://madamedatait.com/og-image.jpg"
-  >
-
-  <!-- JSON-LD -->
-
+  <!-- STRUCTURED DATA -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -97,351 +43,115 @@
     "image":"https://madamedatait.com/og-image.jpg",
     "description":"Assistance informatique et création de sites web professionnels",
     "areaServed":"France",
-    "email":"bhlitdataservices@gmail.com",
-    "sameAs":[
-      "https://www.facebook.com/madamedatait",
-      "https://www.instagram.com/madamedatait",
-      "https://www.tiktok.com/@madamedatait"
-    ]
+    "email":"bhlitdataservices@gmail.com"
   }
-  </script>
-
-  <!-- ANALYTICS DIFFÉRÉ -->
-
-  <script>
-
-  function loadAnalytics(){
-
-    if(window.analyticsLoaded) return;
-
-    window.analyticsLoaded = true;
-
-    const s = document.createElement('script');
-
-    s.src =
-      'https://www.googletagmanager.com/gtag/js?id=G-DL3DERR55V';
-
-    s.async = true;
-
-    document.head.appendChild(s);
-
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag(){
-      dataLayer.push(arguments);
-    }
-
-    window.gtag = gtag;
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-DL3DERR55V');
-  }
-
-  window.addEventListener(
-    'scroll',
-    loadAnalytics,
-    { once:true }
-  );
-
-  window.addEventListener(
-    'click',
-    loadAnalytics,
-    { once:true }
-  );
-
-  </script>
-
-  <!-- REDIRECTION -->
-
-  <script>
-
-  if(window.location.pathname.endsWith('index.html')){
-
-    window.location.replace('/');
-  }
-
   </script>
 
 </head>
 
 <body>
 
-  <!-- HEADER -->
+<header>
 
-  <header>
+  <h1>MadameDataIT</h1>
 
-    <h1>MadameDataIT</h1>
+  <div class="menu-toggle" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Menu">
+    ☰
+  </div>
 
-    <!-- MENU BURGER -->
+  <nav id="menu">
+    <a href="/">Accueil</a>
+    <a href="assistance.html">🛠️ Assistance</a>
+    <a href="sites.html">🌐 Sites Web</a>
+    <a href="formations.html">💰 Digital Store</a>
+    <a href="templates.html">💻 Templates</a>
+    <a href="automatisation.html">⚙️ Automatisation</a>
+    <a href="contact.html">📞 Contact</a>
+  </nav>
 
-    <div
-      class="menu-toggle"
-      onclick="toggleMenu()"
-      aria-label="Menu de navigation"
-      role="button"
-      tabindex="0"
-    >
-      ☰
-    </div>
+</header>
 
-    <!-- NAV -->
+<main>
 
-    <nav id="menu">
+  <section class="hero">
+    <h2>📞 Contact & devis gratuit</h2>
+    <p>
+      Assistance informatique, création de sites web et solutions digitales personnalisées.
+    </p>
+  </section>
 
-      <a href="/">Accueil</a>
+  <section class="contact-section">
 
-      <a href="assistance.html">
-        🛠️ Assistance
-      </a>
+    <div class="contact-card">
 
-      <a href="sites.html">
-        🌐 Sites Web
-      </a>
+      <h3>Informations</h3>
 
-      <a href="formations.html">
-        💰 Digital Store
-      </a>
+      <p><strong>Email :</strong> bhlitdataservices@gmail.com</p>
+      <p><strong>Zone :</strong> France - à distance</p>
 
-      <a href="templates.html">
-        💻 Templates
-      </a>
+      <div class="map-container">
 
-      <a href="automatisation.html">
-        ⚙️ Automatisation
-      </a>
-
-      <a href="contact.html">
-        📞 Contact
-      </a>
-
-    </nav>
-
-  </header>
-
-  <main>
-
-    <!-- HERO -->
-
-    <section class="hero">
-
-      <h2>
-        📞 Contact & devis gratuit
-      </h2>
-
-      <p>
-        Besoin d’une assistance informatique,
-        d’un site web professionnel
-        ou d’une solution digitale personnalisée ?
-        Contactez MadameDataIT pour une réponse rapide.
-      </p>
-
-    </section>
-
-    <!-- CONTACT -->
-
-    <section class="contact-section">
-
-      <!-- INFOS -->
-
-      <div class="contact-card">
-
-        <h3>Informations</h3>
-
-        <div class="contact-info">
-
-          <strong>Email</strong>
-
-          <a href="mailto:bhlitdataservices@gmail.com">
-            bhlitdataservices@gmail.com
-          </a>
-
-        </div>
-
-        <div class="contact-info">
-
-          <strong>Services</strong>
-
-          <p>
-            Assistance informatique<br>
-            Création de sites web<br>
-            Automatisation<br>
-            Solutions digitales
-          </p>
-
-        </div>
-
-        <div class="contact-info">
-
-          <strong>Zone</strong>
-
-          <p>France - à distance</p>
-
-        </div>
-
-        <!-- MAP -->
-
-        <div class="map-container">
-
-          <img
-            src="./images/map.webp"
-            alt="Carte de localisation"
-            width="600"
-            height="400"
-            fetchpriority="high"
-            decoding="async"
-          >
-
-        </div>
-
-      </div>
-
-      <!-- FORM -->
-
-      <div class="contact-card">
-
-        <h3>Envoyer un message</h3>
-
-        <form
-          action="https://formsubmit.co/297e0367bc1b0ec1c1fce53de8c9df88"
-          method="POST"
+        <img
+          src="./images/map.webp"
+          srcset="
+            ./images/map-300.webp 300w,
+            ./images/map-600.webp 600w,
+            ./images/map.webp 900w
+          "
+          sizes="(max-width: 600px) 100vw, 600px"
+          alt="Carte de localisation"
+          width="600"
+          height="400"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
         >
 
-          <input
-            type="hidden"
-            name="_captcha"
-            value="false"
-          >
-
-          <input
-            type="hidden"
-            name="_subject"
-            value="Nouveau message MadameDataIT"
-          >
-
-          <input
-            type="hidden"
-            name="_template"
-            value="table"
-          >
-
-          <input
-            type="hidden"
-            name="_next"
-            value="https://madamedatait.com/merci.html"
-          >
-
-          <input
-            type="text"
-            name="nom"
-            placeholder="Votre nom"
-            autocomplete="name"
-            required
-          >
-
-          <input
-            type="email"
-            name="email"
-            placeholder="Votre email"
-            autocomplete="email"
-            required
-          >
-
-          <input
-            type="text"
-            name="sujet"
-            placeholder="Sujet"
-            required
-          >
-
-          <textarea
-            name="message"
-            placeholder="Votre message"
-            required
-          ></textarea>
-
-          <button
-            type="submit"
-            class="btn"
-          >
-            Envoyer le message
-          </button>
-
-        </form>
-
       </div>
-
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <div class="social-buttons">
-
-      <a
-        href="https://www.facebook.com/madamedatait"
-        target="_blank"
-        rel="noopener"
-      >
-        Facebook
-      </a>
-
-      <a
-        href="https://www.instagram.com/madamedatait"
-        target="_blank"
-        rel="noopener"
-      >
-        Instagram
-      </a>
-
-      <a
-        href="https://www.tiktok.com/@madamedatait"
-        target="_blank"
-        rel="noopener"
-      >
-        TikTok
-      </a>
 
     </div>
 
-    <p>
-      © 2026 MadameDataIT - Tous droits réservés
-    </p>
+    <div class="contact-card">
 
-  </footer>
+      <h3>Envoyer un message</h3>
 
-  <!-- SCRIPT MENU -->
+      <form action="https://formsubmit.co/297e0367bc1b0ec1c1fce53de8c9df88" method="POST">
 
-  <script>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Nouveau message MadameDataIT">
+        <input type="hidden" name="_next" value="https://madamedatait.com/merci.html">
 
-  function toggleMenu(){
+        <input type="text" name="nom" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <input type="text" name="sujet" placeholder="Sujet" required>
 
-    document
-      .getElementById('menu')
-      .classList
-      .toggle('active');
-  }
+        <textarea name="message" placeholder="Votre message" required></textarea>
 
-  document
-    .querySelector('.menu-toggle')
-    .addEventListener('keydown', function(e){
+        <button type="submit" class="btn">
+          Envoyer le message
+        </button>
 
-      if(
-        e.key === 'Enter'
-        ||
-        e.key === ' '
-      ){
+      </form>
 
-        e.preventDefault();
+    </div>
 
-        toggleMenu();
-      }
-    });
+  </section>
 
-  </script>
+</main>
+
+<footer>
+
+  <p>© 2026 MadameDataIT</p>
+
+</footer>
+
+<script>
+
+function toggleMenu(){
+  document.getElementById('menu').classList.toggle('active');
+}
+
+</script>
 
 </body>
 </html>
