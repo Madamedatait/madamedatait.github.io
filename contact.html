@@ -219,157 +219,161 @@
 
   </header>
 
-  <!-- HERO -->
+  <main>
 
-  <section class="hero">
+    <!-- HERO -->
 
-    <h2>
-      📞 Contact & devis gratuit
-    </h2>
+    <section class="hero">
 
-    <p>
-      Besoin d’une assistance informatique,
-      d’un site web professionnel
-      ou d’une solution digitale personnalisée ?
-      Contactez MadameDataIT pour une réponse rapide.
-    </p>
+      <h2>
+        📞 Contact & devis gratuit
+      </h2>
 
-  </section>
+      <p>
+        Besoin d’une assistance informatique,
+        d’un site web professionnel
+        ou d’une solution digitale personnalisée ?
+        Contactez MadameDataIT pour une réponse rapide.
+      </p>
 
-  <!-- CONTACT -->
+    </section>
 
-  <section class="contact-section">
+    <!-- CONTACT -->
 
-    <!-- INFOS -->
+    <section class="contact-section">
 
-    <div class="contact-card">
+      <!-- INFOS -->
 
-      <h3>Informations</h3>
+      <div class="contact-card">
 
-      <div class="contact-info">
+        <h3>Informations</h3>
 
-        <strong>Email</strong>
+        <div class="contact-info">
 
-        <a href="mailto:bhlitdataservices@gmail.com">
-          bhlitdataservices@gmail.com
-        </a>
+          <strong>Email</strong>
+
+          <a href="mailto:bhlitdataservices@gmail.com">
+            bhlitdataservices@gmail.com
+          </a>
+
+        </div>
+
+        <div class="contact-info">
+
+          <strong>Services</strong>
+
+          <p>
+            Assistance informatique<br>
+            Création de sites web<br>
+            Automatisation<br>
+            Solutions digitales
+          </p>
+
+        </div>
+
+        <div class="contact-info">
+
+          <strong>Zone</strong>
+
+          <p>France - à distance</p>
+
+        </div>
+
+        <!-- MAP -->
+
+        <div class="map-container">
+
+          <img
+            src="./images/map.webp"
+            alt="Carte de localisation"
+            width="600"
+            height="400"
+            fetchpriority="high"
+            decoding="async"
+          >
+
+        </div>
 
       </div>
 
-      <div class="contact-info">
+      <!-- FORM -->
 
-        <strong>Services</strong>
+      <div class="contact-card">
 
-        <p>
-          Assistance informatique<br>
-          Création de sites web<br>
-          Automatisation<br>
-          Solutions digitales
-        </p>
+        <h3>Envoyer un message</h3>
+
+        <form
+          action="https://formsubmit.co/297e0367bc1b0ec1c1fce53de8c9df88"
+          method="POST"
+        >
+
+          <input
+            type="hidden"
+            name="_captcha"
+            value="false"
+          >
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nouveau message MadameDataIT"
+          >
+
+          <input
+            type="hidden"
+            name="_template"
+            value="table"
+          >
+
+          <input
+            type="hidden"
+            name="_next"
+            value="https://madamedatait.com/merci.html"
+          >
+
+          <input
+            type="text"
+            name="nom"
+            placeholder="Votre nom"
+            autocomplete="name"
+            required
+          >
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Votre email"
+            autocomplete="email"
+            required
+          >
+
+          <input
+            type="text"
+            name="sujet"
+            placeholder="Sujet"
+            required
+          >
+
+          <textarea
+            name="message"
+            placeholder="Votre message"
+            required
+          ></textarea>
+
+          <button
+            type="submit"
+            class="btn"
+          >
+            Envoyer le message
+          </button>
+
+        </form>
 
       </div>
 
-      <div class="contact-info">
+    </section>
 
-        <strong>Zone</strong>
-
-        <p>France - à distance</p>
-
-      </div>
-
-      <!-- MAP -->
-
-      <div class="map-container">
-
-        <img
-          src="./images/map.webp"
-          alt="Carte de localisation"
-          width="600"
-          height="400"
-          fetchpriority="high"
-          decoding="async"
-        >
-
-      </div>
-
-    </div>
-
-    <!-- FORM -->
-
-    <div class="contact-card">
-
-      <h3>Envoyer un message</h3>
-
-      <form
-        action="https://formsubmit.co/297e0367bc1b0ec1c1fce53de8c9df88"
-        method="POST"
-      >
-
-        <input
-          type="hidden"
-          name="_captcha"
-          value="false"
-        >
-
-        <input
-          type="hidden"
-          name="_subject"
-          value="Nouveau message MadameDataIT"
-        >
-
-        <input
-          type="hidden"
-          name="_template"
-          value="table"
-        >
-
-        <input
-          type="hidden"
-          name="_next"
-          value="https://madamedatait.com/merci.html"
-        >
-
-        <input
-          type="text"
-          name="nom"
-          placeholder="Votre nom"
-          autocomplete="name"
-          required
-        >
-
-        <input
-          type="email"
-          name="email"
-          placeholder="Votre email"
-          autocomplete="email"
-          required
-        >
-
-        <input
-          type="text"
-          name="sujet"
-          placeholder="Sujet"
-          required
-        >
-
-        <textarea
-          name="message"
-          placeholder="Votre message"
-          required
-        ></textarea>
-
-        <button
-          type="submit"
-          class="btn"
-        >
-          Envoyer le message
-        </button>
-
-      </form>
-
-    </div>
-
-  </section>
+  </main>
 
   <!-- FOOTER -->
 
