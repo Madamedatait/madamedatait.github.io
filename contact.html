@@ -18,30 +18,34 @@
   <link rel="icon" href="favicon.ico">
 
   <!-- CSS PRINCIPAL -->
+  <link rel="preload" href="style.css" as="style">
   <link rel="stylesheet" href="style.css">
+
+  <!-- POLICES -->
   <link
-  rel="preload"
-  href="./poppins-v24-latin/poppins-v24-latin-regular.woff2"
-  as="font"
-  type="font/woff2"
-  crossorigin
->
-
-<link
-  rel="preload"
-  href="./poppins-v24-latin/poppins-v24-latin-700.woff2"
-  as="font"
-  type="font/woff2"
-  crossorigin
->
-
-  <!-- IMAGE LCP -->
-  <link 
-    rel="preload" 
-    as="image" 
-    href="./images/map.webp"
+    rel="preload"
+    href="./poppins-v24-latin/poppins-v24-latin-regular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
   >
 
+  <link
+    rel="preload"
+    href="./poppins-v24-latin/poppins-v24-latin-700.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  >
+
+  <!-- IMAGE LCP -->
+  <link
+    rel="preload"
+    as="image"
+    href="./images/map.webp"
+    fetchpriority="high"
+  >
+  
   <!-- OPEN GRAPH -->
   <meta property="og:title" content="MadameDataIT - Assistance informatique & création de sites web professionnels">
   <meta property="og:description" content="Dépannage PC rapide et création de sites web professionnels.">
@@ -111,7 +115,6 @@
     alt="Carte de localisation"
     width="600"
     height="400"
-    loading="eager"
     decoding="async"
     fetchpriority="high">
 </div>
