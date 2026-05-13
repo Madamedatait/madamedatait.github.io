@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#020617" />
   <title>Boutique digitale & services numériques | MadameDataIT</title>
   <meta name="description" content="Découvrez nos services digitaux, outils en ligne et solutions numériques pour booster votre activité." />
-  <link rel="stylesheet" href="fonts.css"> 
+  <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" />
   <link rel="canonical" href="https://madamedatait.com/digital-store" />
-
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="preload" href="./poppins-v24-latin/poppins-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="./poppins-v24-latin/poppins-v24-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+  
   <!-- Open Graph -->
   <meta property="og:title" content="Digital Store & services numériques | MadameDataIT" />
   <meta property="og:description" content="Solutions digitales, outils en ligne et services numériques pour booster votre activité." />
@@ -18,241 +22,29 @@
 
   <!-- Données structurées JSON-LD -->
   <script type="application/ld+json">
- {
-  "@context": "https://schema.org",
-  "@type": "Store",
-  "name": "MadameDataIT Digital Store",
-  "url": "https://madamedatait.com/digital-store",
-  "description": "Services et outils numériques pour entreprises et particuliers."
-}
-</script>
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "MadameDataIT Digital Store",
+    "url": "https://madamedatait.com/digital-store",
+    "description": "Services et outils numériques pour entreprises et particuliers."
+  }
+  </script>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DL3DERR55V"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-DL3DERR55V');
   </script>
-
-  <style>
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #0f172a;
-  color: white;
-}
-
-/* HEADER */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background: #020617;
-  position: sticky;
-  top: 0;
-}
-
-header h1 {
-  margin: 0;
-  color: #38bdf8;
-  font-size: 18px;
-}
-
-/* BURGER */
-.menu-toggle {
-  font-size: 22px;
-  cursor: pointer;
-  display: none;
-}
-
-/* NAV */
-nav {
-  display: flex;
-  gap: 15px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  opacity: 0.8;
-  transition: color 0.3s ease, opacity 0.3s ease;
-}
-
-nav a:hover {
-  color: #38bdf8;
-}
-
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 30px 15px 20px;
-}
-
-.hero h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: #38bdf8;
-}
-
-.hero p {
-  font-size: 16px;
-  color: #94a3b8;
-  max-width: 600px;
-  margin: 0 auto 20px;
-}
-
-/* SECTION */
-.section {
-  padding: 20px 15px 40px;
-  text-align: center;
-}
-
-.section h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #38bdf8;
-  margin-top: -10px;
-}
-
-/* OFFRES */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-@media (max-width: 700px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-.card {
-  background: #020617;
-  padding: 16px;
-  border-radius: 8px;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
-}
-
-.card:hover,
-.card:focus-within {
-  transform: translateY(-5px);
-}
-
-.card h3 {
-  margin-top: 0;
-  font-size: 18px;
-}
-
-.card p {
-  font-size: 14px;
-  color: #94a3b8;
-}
-
-.price {
-  color: #38bdf8;
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-/* BUTTON */
-.btn {
-  margin-top: 10px;
-  padding: 10px 15px;
-  background: #38bdf8;
-  border-radius: 6px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none; /* ✅ FIX */
-}
-
-.btn:hover {
-  transform: scale(1.05);
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 15px 10px;
-  background: #020617;
-  margin-top: 20px;
-  font-size: 13px;
-  color: #94a3b8;
-}
-
-/* MOBILE */
-@media (max-width: 700px) {
-
-  .menu-toggle {
-    display: block;
-  }
-
-  nav {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #020617;
-    flex-direction: column;
-    width: 220px;
-    padding: 15px;
-    display: none;
-  }
-
-  nav.active {
-    display: flex;
-  }
-
-  nav a {
-    padding: 10px 0;
-    font-size: 16px;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Social Buttons */   
-.social-buttons {
-  margin: 10px 0 5px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.social-buttons a {
-  color: #38bdf8;
-  font-size: 22px;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.social-buttons a:hover,
-.social-buttons a:focus {
-  color: #0ea5e9;
-  outline: none;
-}
-
- </style>
 </head>
 <body>
- <header>
-  <h1>MadameDataIT</h1>
-  <!-- BURGER -->
+  <header>
+    <h1>MadameDataIT</h1>
     <div class="menu-toggle" onclick="toggleMenu()" aria-label="Menu de navigation" role="button" tabindex="0">☰</div>
-
-    <nav id="menu" role="navigation">
+    <nav id="menu" role="navigation" aria-label="Menu principal">
       <a href="/">Accueil</a>
       <a href="assistance.html">🛠️ Assistance</a>
       <a href="sites.html">🌐 Sites Web</a>
@@ -262,88 +54,86 @@ footer {
       <a href="contact.html">📞 Contact</a>
     </nav>
   </header>
-  
-<div class="hero">
-  <h1>💰 Digital Store</h1>
-  <p>Ebooks, cours et ressources digitales pour apprendre et progresser</p>
-</div>
 
-<section class="section">
+  <main>
+    <section class="hero" aria-label="Présentation Digital Store">
+      <h1>💰 Digital Store</h1>
+      <p>Ebooks, cours et ressources digitales pour apprendre et progresser</p>
+    </section>
 
-  <div class="cards">
+    <section class="section" aria-label="Offres Digital Store">
+      <div class="cards" role="list">
+        <article class="card" role="listitem" tabindex="0">
+          <span class="tag" aria-label="Type de produit: Ebook">Ebook</span>
+          <h3>🐍 Python Mastery</h3>
+          <p>Apprends Python + exercices + projets concrets</p>
+          <div class="price-row">
+            <div class="price" aria-label="Prix">19€</div>
+            <a class="btn" href="mailto:tonemail@gmail.com?subject=Achat%20Python" role="button">Acheter</a>
+          </div>
+        </article>
 
-    <div class="card">
-      <span class="tag">Ebook</span>
-      <h3>🐍 Python Mastery</h3>
-      <p>Apprends Python + exercices + projets concrets</p>
-      <div class="price-row">
-        <div class="price">19€</div>
-        <a class="btn" href="mailto:tonemail@gmail.com?subject=Achat%20Python">Acheter</a>
+        <article class="card" role="listitem" tabindex="0">
+          <span class="tag" aria-label="Type de produit: Ebook">Ebook</span>
+          <h3>🗄️ SQL Mastery</h3>
+          <p>Requêtes, bases de données, niveau pro</p>
+          <div class="price-row">
+            <div class="price" aria-label="Prix">15€</div>
+            <a class="btn" href="mailto:tonemail@gmail.com?subject=Achat%20SQL" role="button">Acheter</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" tabindex="0">
+          <span class="tag" aria-label="Type de produit: Data Viz">Data Viz</span>
+          <h3>📊 Matplotlib + Seaborn</h3>
+          <p>Graphiques professionnels et analyse data</p>
+          <div class="price-row">
+            <div class="price" aria-label="Prix">17€</div>
+            <a class="btn" href="mailto:tonemail@gmail.com?subject=Achat%20DataViz" role="button">Acheter</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" tabindex="0">
+          <span class="tag" aria-label="Type de produit: Apps">Apps</span>
+          <h3>⚡ Plotly + Streamlit</h3>
+          <p>Dashboards interactifs + apps data</p>
+          <div class="price-row">
+            <div class="price" aria-label="Prix">25€</div>
+            <a class="btn" href="mailto:tonemail@gmail.com?subject=Achat%20Streamlit" role="button">Acheter</a>
+          </div>
+        </article>
       </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-buttons" aria-label="Liens vers réseaux sociaux">
+      <a href="https://www.facebook.com/madamedatait" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#38bdf8" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M22 12a10 10 0 1 0-11.5 9.87v-6.99h-2.3v-2.88h2.3v-2.2c0-2.28 1.36-3.54 3.44-3.54.99 0 2.02.18 2.02.18v2.22h-1.14c-1.12 0-1.47.7-1.47 1.42v1.92h2.5l-.4 2.88h-2.1v6.99A10 10 0 0 0 22 12z"/>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/madamedatait" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#38bdf8" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.75-.88a1.12 1.12 0 1 1 0 2.25 1.12 1.12 0 0 1 0-2.25z"/>
+        </svg>
+      </a>
+      <a href="https://www.tiktok.com/@madamedatait" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok" style="display:inline-block; vertical-align:middle;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24" fill="#38bdf8" aria-hidden="true">
+          <path d="M448,209.91a210.75,210.75,0,0,1-65.88-10.14v95.52a110.84,110.84,0,1,1-110.84-110.84V0h38.14A173.74,173.74,0,0,0,379.79,73.18,186.81,186.81,0,0,0,448,209.91Z"/>
+        </svg>
+      </a>
     </div>
-
-    <div class="card">
-      <span class="tag">Ebook</span>
-      <h3>🗄️ SQL Mastery</h3>
-      <p>Requêtes, bases de données, niveau pro</p>
-      <div class="price-row">
-        <div class="price">15€</div>
-        <a class="btn" href="mailto:tonemail@gmail.com?subject=Achat%20SQL">Acheter</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <span class="tag">Data Viz</span>
-      <h3>📊 Matplotlib + Seaborn</h3>
-      <p>Graphiques professionnels et analyse data</p>
-      <div class="price-row">
-        <div class="price">17€</div>
-        <a class="btn" href="mailto:tonemail@gmail.com?subject=Achat%20DataViz">Acheter</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <span class="tag">Apps</span>
-      <h3>⚡ Plotly + Streamlit</h3>
-      <p>Dashboards interactifs + apps data</p>
-      <div class="price-row">
-        <div class="price">25€</div>
-        <a class="btn" href="mailto:tonemail@gmail.com?subject=Achat%20Streamlit">Acheter</a>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-<footer>
-  <div class="social-buttons" aria-label="Liens vers réseaux sociaux">
-    <a href="https://www.facebook.com/madamedatait" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#38bdf8" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M22 12a10 10 0 1 0-11.5 9.87v-6.99h-2.3v-2.88h2.3v-2.2c0-2.28 1.36-3.54 3.44-3.54.99 0 2.02.18 2.02.18v2.22h-1.14c-1.12 0-1.47.7-1.47 1.42v1.92h2.5l-.4 2.88h-2.1v6.99A10 10 0 0 0 22 12z"/>
-      </svg>
-    </a>
-    <a href="https://www.instagram.com/madamedatait" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#38bdf8" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.75-.88a1.12 1.12 0 1 1 0 2.25 1.12 1.12 0 0 1 0-2.25z"/>
-      </svg>
-    </a>
-    <a href="https://www.tiktok.com/@madamedatait" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok" style="display:inline-block; vertical-align:middle;">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24" fill="#38bdf8" aria-hidden="true">
-    <path d="M448,209.91a210.75,210.75,0,0,1-65.88-10.14v95.52a110.84,110.84,0,1,1-110.84-110.84V0h38.14A173.74,173.74,0,0,0,379.79,73.18,186.81,186.81,0,0,0,448,209.91Z"/>
-  </svg>
-</a>
-  </div>
-  <p>© 2026 MadameDataIT - Tous droits réservés</p>
-</footer>
+    <p>© 2026 MadameDataIT - Tous droits réservés</p>
+  </footer>
 
   <script>
+    // Menu toggle for mobile
     function toggleMenu() {
       document.getElementById('menu').classList.toggle('active');
     }
-    // Support clavier pour menu burger
-    document.querySelector('.menu-toggle').addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') {
+    document.querySelector('.menu-toggle').addEventListener('keydown', function(e) {
+      if(e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         toggleMenu();
       }
