@@ -2,34 +2,56 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#020617">
+
   <title>Dépannage informatique & assistance PC à distance | MadameDataIT</title>
   <meta name="description" content="Réparation d’ordinateur, suppression de virus, optimisation PC et assistance informatique rapide à domicile ou à distance." />
-  <link rel="stylesheet" href="fonts.css">
+  
   <link rel="icon" href="favicon.ico" />
   <link rel="canonical" href="https://madamedatait.com/assistance.html" />
- 
+  <!-- CSS PRINCIPAL -->
+  <link rel="preload" href="style.css" as="style">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- POLICES -->
+  <link
+    rel="preload"
+    href="./poppins-v24-latin/poppins-v24-latin-regular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  >
+
+  <link
+    rel="preload"
+    href="./poppins-v24-latin/poppins-v24-latin-700.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  >
+
   <!-- Open Graph -->
   <meta property="og:title" content="Dépannage informatique rapide | MadameDataIT" />
   <meta property="og:description" content="Réparation PC, suppression de virus, optimisation et assistance informatique à domicile ou à distance." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://madamedatait.com/assistance.html" />
   <meta property="og:image" content="https://madamedatait.com/og-image.jpg" />  
-  
+
   <!-- Données structurées JSON-LD -->
   <script type="application/ld+json">
- {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Assistance informatique",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "MadameDataIT"
- },
-  "areaServed": "France",
-  "url": "https://madamedatait.com/assistance.html",
-  "description": "Dépannage informatique, suppression de virus et optimisation PC."
-}  
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Assistance informatique",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "MadameDataIT"
+    },
+    "areaServed": "France",
+    "url": "https://madamedatait.com/assistance.html",
+    "description": "Dépannage informatique, suppression de virus et optimisation PC."
+  }  
   </script>
 
   <!-- Google tag (gtag.js) -->
@@ -38,253 +60,20 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-DL3DERR55V');
   </script>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #0f172a;
-      color: white;
-    }
-
-    /* HEADER */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px;
-      background: #020617;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    header h1 {
-      margin: 0;
-      color: #38bdf8;
-      font-size: 18px;
-    }
-
-    /* BURGER */
-    .menu-toggle {
-      font-size: 22px;
-      cursor: pointer;
-      display: none;
-      user-select: none;
-    }
-
-    /* NAV */
-    nav {
-      display: flex;
-      gap: 15px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-      opacity: 0.8;
-      transition: color 0.3s ease, opacity 0.3s ease;
-    }
-
-    nav a:hover,
-    nav a:focus {
-      color: #38bdf8;
-      opacity: 1;
-      outline: none;
-    }
-
-    /* MOBILE */
-    @media (max-width: 700px) {
-      .menu-toggle {
-        display: block;
-      }
-
-      nav {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: #020617;
-        flex-direction: column;
-        width: 220px;
-        padding: 15px;
-        display: none;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-        border-radius: 0 0 0 8px;
-      }
-
-      nav.active {
-        display: flex;
-      }
-
-      nav a {
-        padding: 10px 0;
-        font-size: 16px;
-      }
-    }
-
-    /* HERO */
-    .hero {
-      text-align: center;
-      padding: 30px 15px 20px;
-    }
-
-    .hero h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-      color: #38bdf8;
-    }
-
-    .hero p {
-      font-size: 16px;
-      color: #94a3b8;
-      max-width: 600px;
-      margin: 0 auto 20px;
-    }
-
-    /* SECTION */
-    .section {
-      padding: 20px 15px 40px;
-      text-align: center;
-    }
-
-    .section h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
-      color: #38bdf8;
-      margin-top: -10px;
-    }
-
-    /* CARDS */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .card {
-      background: #020617;
-      padding: 16px;
-      border-radius: 8px;
-      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover,
-    .card:focus-within {
-      transform: translateY(-5px);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      font-size: 18px;
-    }
-
-    .card p {
-      font-size: 14px;
-      color: #94a3b8;
-    }
-
-    .price {
-      color: #38bdf8;
-      font-size: 18px;
-      margin: 10px 0;
-    }
-
-    /* BUTTON */
-    .btn {
-      margin-top: 15px;
-      padding: 12px 24px;
-      background: #38bdf8;
-      border: none;
-      border-radius: 6px;
-      color: white;
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 16px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .btn:hover,
-    .btn:focus {
-      background-color: #0ea5e9;
-      outline: none;
-    }
-
-    /* CONTACT */
-    .contact {
-      margin-top: 30px;
-    }
-
-    /* FAQ */
-    dl {
-      max-width: 700px;
-      margin: 30px auto 0 auto;
-      text-align: left;
-      color: #cbd5e1;
-    }
-
-    dt {
-      font-weight: 700;
-      margin-top: 20px;
-      font-size: 16px;
-      color: #38bdf8;
-      cursor: pointer;
-    }
-
-    dd {
-      margin: 5px 0 0 15px;
-      font-size: 14px;
-      line-height: 1.5;
-      color: #94a3b8;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 15px 10px;
-      background: #020617;
-      margin-top: 20px;
-      font-size: 13px;
-      color: #94a3b8;
-    }
-
-    /* Social Buttons */
-    .social-buttons {
-      margin: 10px 0 5px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    .social-buttons a {
-      color: #38bdf8;
-      font-size: 22px;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .social-buttons a:hover,
-    .social-buttons a:focus {
-      color: #0ea5e9;
-      outline: none;
-    }
-  </style>
 </head>
 <body>
   <header>
     <h1>MadameDataIT</h1>
-    <!-- BURGER -->
-    <div class="menu-toggle" onclick="toggleMenu()" aria-label="Menu de navigation" role="button" tabindex="0">☰</div>
 
-    <nav id="menu" role="navigation">
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Ouvrir le menu">
+      ☰
+    </button>
+    
+    <nav id="menu">
       <a href="/">Accueil</a>
-      <a href="assistance.html">🛠️ Assistance</a>
+      <a href="assistance.html" aria-current="page">🛠️ Assistance</a>
       <a href="sites.html">🌐 Sites Web</a>
       <a href="formations.html">💰 Digital Store</a>
       <a href="templates.html">💻 Templates</a>
@@ -293,62 +82,67 @@
     </nav>
   </header>
 
-  <div class="hero">
-    <h1>🛠️ Assistance informatique à distance</h1>
-    <p>Dépannage informatique rapide et efficace, sans déplacement, avec un service professionnel adapté aux particuliers et aux entreprises.  
-      Découvrez aussi nos services de <a href="sites.html" style="color:#38bdf8; text-decoration:underline;">création de sites web</a> et notre <a href="formations.html" style="color:#38bdf8; text-decoration:underline;">Digital Store</a> pour apprendre et optimiser vos outils numériques.</p>
-  </div>
-
-  <section class="section">
-    <h2>🔥 Offres disponibles</h2>
-
-    <div class="cards">
-
-      <div class="card">
-        <h3>⚡ Dépannage rapide</h3>
-        <p>Résolution de bugs, erreurs, lenteurs</p>
-        <div class="price">À partir de 20€</div>
-      </div>
-
-      <div class="card">
-        <h3>💻 Installation logiciels</h3>
-        <p>Installation + configuration complète</p>
-        <div class="price">À partir de 25€</div>
-      </div>
-
-      <div class="card">
-        <h3>🔒 Sécurité & nettoyage</h3>
-        <p>Virus, optimisation, nettoyage PC</p>
-        <div class="price">À partir de 30€</div>
-      </div>
-
-      <div class="card">
-        <h3>⚙️ Configuration système</h3>
-        <p>Emails, imprimantes, paramètres</p>
-        <div class="price">À partir de 25€</div>
-      </div>
-
-      <div class="card">
-        <h3>📚 Aide & formation</h3>
-        <p>Apprendre à utiliser votre ordinateur</p>
-        <div class="price">À partir de 20€</div>
-      </div>
-
-      <div class="card">
-        <h3>🌐 Assistance web</h3>
-        <p>Problèmes de site, bugs, modifications rapides</p>
-        <div class="price">À partir de 30€</div>
-      </div>
-
+  <main>
+    <div class="hero">
+      <h1>🛠️ Assistance informatique à distance</h1>
+      <p>
+        Dépannage informatique rapide et efficace, sans déplacement, avec un service professionnel adapté aux particuliers et aux entreprises.  
+        Découvrez aussi nos services de 
+        <a href="sites.html" style="color:#38bdf8; text-decoration:underline;">création de sites web</a> 
+        et notre 
+        <a href="formations.html" style="color:#38bdf8; text-decoration:underline;">Digital Store</a> 
+        pour apprendre et optimiser vos outils numériques.
+      </p>
     </div>
-  </section>
 
-  <!-- Section contact simplifiée -->
-  <section class="section" aria-label="Contact">
-    <h2>📩 Me contacter</h2>
-    <p>Expliquez votre problème :</p>
-    <button class="btn" onclick="location.href='contact.html'">Contactez-nous</button>
-  </section>
+    <section class="section">
+      <h2>🔥 Offres disponibles</h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>⚡ Dépannage rapide</h3>
+          <p>Résolution de bugs, erreurs, lenteurs</p>
+          <div class="price">À partir de 20€</div>
+        </div>
+
+        <div class="card">
+          <h3>💻 Installation logiciels</h3>
+          <p>Installation + configuration complète</p>
+          <div class="price">À partir de 25€</div>
+        </div>
+
+        <div class="card">
+          <h3>🔒 Sécurité & nettoyage</h3>
+          <p>Virus, optimisation, nettoyage PC</p>
+          <div class="price">À partir de 30€</div>
+        </div>
+
+        <div class="card">
+          <h3>⚙️ Configuration système</h3>
+          <p>Emails, imprimantes, paramètres</p>
+          <div class="price">À partir de 25€</div>
+        </div>
+
+        <div class="card">
+          <h3>📚 Aide & formation</h3>
+          <p>Apprendre à utiliser votre ordinateur</p>
+          <div class="price">À partir de 20€</div>
+        </div>
+
+        <div class="card">
+          <h3>🌐 Assistance web</h3>
+          <p>Problèmes de site, bugs, modifications rapides</p>
+          <div class="price">À partir de 30€</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" aria-label="Contact">
+      <h2>📩 Me contacter</h2>
+      <p>Expliquez votre problème :</p>
+      <button class="btn" onclick="location.href='contact.html'">Contactez-nous</button>
+    </section>
+  </main>
 
   <footer>
     <div class="social-buttons" aria-label="Liens vers réseaux sociaux">
@@ -375,7 +169,6 @@
     function toggleMenu() {
       document.getElementById('menu').classList.toggle('active');
     }
-    // Support clavier pour menu burger
     document.querySelector('.menu-toggle').addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
