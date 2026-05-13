@@ -143,6 +143,28 @@
         toggleMenu();
       }
     });
+
+   // FAQ toggle behavior
+    document.querySelectorAll('dt').forEach(dt => {
+      dt.addEventListener('click', () => {
+        const expanded = dt.getAttribute('aria-expanded') === 'true';
+        dt.setAttribute('aria-expanded', String(!expanded));
+        const dd = document.getElementById(dt.getAttribute('aria-controls'));
+        if(dd) {
+          if(expanded) {
+            dd.hidden = true;
+          } else {
+            dd.hidden = false;
+          }
+        }
+      });
+      dt.addEventListener('keydown', (e) => {
+        if(e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          dt.click();
+        }
+      });
+    }); 
   </script>
 </body>
 </html>
