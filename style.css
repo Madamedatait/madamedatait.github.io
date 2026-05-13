@@ -178,6 +178,35 @@ nav a:hover{
   font-size:22px;
 }
 
+/* Tag pour catégoriser les produits */
+.tag {
+  display: inline-block;
+  background-color: #0ea5e9;
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  user-select: none;
+}
+
+/* Style pour le prix */
+.price {
+  color: #38bdf8;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+/* Conteneur pour prix et bouton alignés verticalement */
+.price-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
 /* ===================================
    CONTACT INFO
 =================================== */
