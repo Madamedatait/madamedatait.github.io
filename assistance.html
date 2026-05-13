@@ -3,40 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#020617">
-
+  <meta name="theme-color" content="#020617" />
   <title>Dépannage informatique & assistance PC à distance | MadameDataIT</title>
   <meta name="description" content="Réparation d’ordinateur, suppression de virus, optimisation PC et assistance informatique rapide à domicile ou à distance." />
-  
   <link rel="icon" href="favicon.ico" />
   <link rel="canonical" href="https://madamedatait.com/assistance.html" />
-  <!-- CSS PRINCIPAL -->
-  <link rel="preload" href="style.css" as="style">
-  <link rel="stylesheet" href="style.css">
-
-  <!-- POLICES -->
-  <link
-    rel="preload"
-    href="./poppins-v24-latin/poppins-v24-latin-regular.woff2"
-    as="font"
-    type="font/woff2"
-    crossorigin
-  >
-
-  <link
-    rel="preload"
-    href="./poppins-v24-latin/poppins-v24-latin-700.woff2"
-    as="font"
-    type="font/woff2"
-    crossorigin
-  >
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preload" href="./poppins-v24-latin/poppins-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="./poppins-v24-latin/poppins-v24-latin-700.woff2" as="font" type="font/woff2" crossorigin />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Dépannage informatique rapide | MadameDataIT" />
   <meta property="og:description" content="Réparation PC, suppression de virus, optimisation et assistance informatique à domicile ou à distance." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://madamedatait.com/assistance.html" />
-  <meta property="og:image" content="https://madamedatait.com/og-image.jpg" />  
+  <meta property="og:image" content="https://madamedatait.com/og-image.jpg" />
 
   <!-- Données structurées JSON-LD -->
   <script type="application/ld+json">
@@ -51,7 +33,7 @@
     "areaServed": "France",
     "url": "https://madamedatait.com/assistance.html",
     "description": "Dépannage informatique, suppression de virus et optimisation PC."
-  }  
+  }
   </script>
 
   <!-- Google tag (gtag.js) -->
@@ -66,12 +48,8 @@
 <body>
   <header>
     <h1>MadameDataIT</h1>
-
-    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Ouvrir le menu">
-      ☰
-    </button>
-    
-    <nav id="menu">
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Ouvrir le menu">☰</button>
+    <nav id="menu" role="navigation">
       <a href="/">Accueil</a>
       <a href="assistance.html" aria-current="page">🛠️ Assistance</a>
       <a href="sites.html">🌐 Sites Web</a>
@@ -83,7 +61,7 @@
   </header>
 
   <main>
-    <div class="hero">
+    <div class="hero" style="text-align:center;">
       <h1>🛠️ Assistance informatique à distance</h1>
       <p>
         Dépannage informatique rapide et efficace, sans déplacement, avec un service professionnel adapté aux particuliers et aux entreprises.  
@@ -95,49 +73,49 @@
       </p>
     </div>
 
-    <section class="section centered-section">
+    <section class="section" style="max-width:1100px; margin: 40px auto; text-align:center;">
       <h2>🔥 Offres disponibles</h2> 
 
-    <div class="contact-section">
-      <div class="contact-card">
-      <h3>⚡ Dépannage rapide</h3>
-      <p>Résolution de bugs, erreurs, lenteurs</p>
-      <div class="price">À partir de 20€</div>
-    </div>
+      <div class="contact-section">
+        <div class="contact-card">
+          <h3>⚡ Dépannage rapide</h3>
+          <p>Résolution de bugs, erreurs, lenteurs</p>
+          <div class="price">À partir de 20€</div>
+        </div>
 
-    <div class="contact-card">
-      <h3>💻 Installation logiciels</h3>
-      <p>Installation + configuration complète</p>
-      <div class="price">À partir de 25€</div>
-    </div>
+        <div class="contact-card">
+          <h3>💻 Installation logiciels</h3>
+          <p>Installation + configuration complète</p>
+          <div class="price">À partir de 25€</div>
+        </div>
 
-    <div class="contact-card">
-      <h3>🔒 Sécurité & nettoyage</h3>
-      <p>Virus, optimisation, nettoyage PC</p>
-      <div class="price">À partir de 30€</div>
-    </div>
+        <div class="contact-card">
+          <h3>🔒 Sécurité & nettoyage</h3>
+          <p>Virus, optimisation, nettoyage PC</p>
+          <div class="price">À partir de 30€</div>
+        </div>
 
-    <div class="contact-card">
-      <h3>⚙️ Configuration système</h3>
-      <p>Emails, imprimantes, paramètres</p>
-      <div class="price">À partir de 25€</div>
-    </div>
+        <div class="contact-card">
+          <h3>⚙️ Configuration système</h3>
+          <p>Emails, imprimantes, paramètres</p>
+          <div class="price">À partir de 25€</div>
+        </div>
 
-    <div class="contact-card">
-      <h3>📚 Aide & formation</h3>
-      <p>Apprendre à utiliser votre ordinateur</p>
-      <div class="price">À partir de 20€</div>
-    </div>
+        <div class="contact-card">
+          <h3>📚 Aide & formation</h3>
+          <p>Apprendre à utiliser votre ordinateur</p>
+          <div class="price">À partir de 20€</div>
+        </div>
 
-    <div class="contact-card">
-      <h3>🌐 Assistance web</h3>
-      <p>Problèmes de site, bugs, modifications rapides</p>
-      <div class="price">À partir de 30€</div>
-    </div>
-  </div>
-</section>
+        <div class="contact-card">
+          <h3>🌐 Assistance web</h3>
+          <p>Problèmes de site, bugs, modifications rapides</p>
+          <div class="price">À partir de 30€</div>
+        </div>
+      </div>
+    </section>
 
-    <section class="section contact centered-section" aria-label="Contact">
+    <section class="section contact" aria-label="Contact" style="max-width:600px; margin: 40px auto; text-align:center;">
       <h2>📩 Me contacter</h2>
       <p>Expliquez votre problème :</p>
       <button class="btn" onclick="location.href='contact.html'">Contactez-nous</button>
