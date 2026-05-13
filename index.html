@@ -41,8 +41,7 @@
 <body>
   <header>
     <h1>MadameDataIT</h1>
-    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Ouvrir le menu">☰</button>
-    <nav id="menu" role="navigation">
+    <div class="menu-toggle" onclick="toggleMenu()" aria-label="Menu de navigation" role="button" tabindex="0">☰</div>
       <a href="index.html">Accueil</a>
       <a href="assistance.html">🛠️ Assistance</a>
       <a href="sites.html">🌐 Sites Web</a>
@@ -99,9 +98,9 @@
     </div>
   </div>
 </section>
-
-    <section class="section" aria-label="Foire aux questions">
-      <h2>❓ Questions fréquentes</h2>
+    
+<section class="section" aria-label="Foire aux questions" style="max-width:700px; margin: 0 auto; text-align:left;">
+  <h2 class="section-title">❓ Questions fréquentes</h2>
       <dl>
         <dt>Quels types d’assistance informatique proposez-vous ?</dt>
         <dd>Nous offrons dépannage, installation, configuration de PC, et support technique rapide pour particuliers et entreprises.</dd>
