@@ -44,7 +44,7 @@
   <header>
     <h1>MadameDataIT</h1>
     <div class="menu-toggle" onclick="toggleMenu()" aria-label="Menu de navigation" role="button" tabindex="0">☰</div>
-    <nav id="menu" role="navigation">
+    <nav id="menu" role="navigation" aria-label="Menu principal">
       <a href="index.html">Accueil</a>
       <a href="assistance.html">🛠️ Assistance</a>
       <a href="sites.html">🌐 Sites Web</a>
@@ -67,52 +67,52 @@
     </section>
 
     <section class="section" aria-label="Services disponibles">
-  <h2 class="section-title">🔥 Services disponibles</h2>
-  <div class="contact-section">
-    <div class="contact-card">
-      <h3>🛠️ Assistance informatique</h3>
-      <p>Dépannage, installation, configuration PC</p>
-      <button class="btn" onclick="location.href='assistance.html'">Demander</button>
-    </div>
-    <div class="contact-card">
-      <h3>🌐 Création de sites web</h3>
-      <p>Site vitrine professionnel pour business</p>
-      <button class="btn" onclick="location.href='sites.html'">Commander</button>
-    </div>
-    <div class="contact-card">
-      <h3>💰 Digital Store</h3>
-      <p>Apprentissage pratique (SQL, Python, Web et autres)</p>
-      <button class="btn" onclick="location.href='formations.html'">Voir</button>
-    </div>
-    <div class="contact-card">
-      <h3>💻 Templates</h3>
-      <p>Sites, designs et projets utilisables directement</p>
-      <button class="btn" onclick="location.href='templates.html'">Voir</button>
-    </div>
-    <div class="contact-card">
-      <h3>⚙️ Automatisation</h3>
-      <p>Scripts Python pour gagner du temps</p>
-      <button class="btn" onclick="location.href='automatisation.html'">Voir</button>
-    </div>
-    <div class="contact-card">
-      <h3>🧩 Support technique</h3>
-      <p>Aide rapide pour problèmes informatiques</p>
-      <button class="btn" onclick="location.href='assistance.html'">Contacter</button>
-    </div>
-  </div>
-</section>
-    
-<section class="section" aria-label="Foire aux questions" style="max-width:700px; margin: 0 auto; text-align:center;">
-  <h2 class="section-title">❓ Questions fréquentes</h2>
+      <h2 class="section-title">🔥 Services disponibles</h2>
+      <div class="contact-section">
+        <div class="contact-card" tabindex="0">
+          <h3>🛠️ Assistance informatique</h3>
+          <p>Dépannage, installation, configuration PC</p>
+          <button class="btn" onclick="location.href='assistance.html'">Demander</button>
+        </div>
+        <div class="contact-card" tabindex="0">
+          <h3>🌐 Création de sites web</h3>
+          <p>Site vitrine professionnel pour business</p>
+          <button class="btn" onclick="location.href='sites.html'">Commander</button>
+        </div>
+        <div class="contact-card" tabindex="0">
+          <h3>💰 Digital Store</h3>
+          <p>Apprentissage pratique (SQL, Python, Web et autres)</p>
+          <button class="btn" onclick="location.href='formations.html'">Voir</button>
+        </div>
+        <div class="contact-card" tabindex="0">
+          <h3>💻 Templates</h3>
+          <p>Sites, designs et projets utilisables directement</p>
+          <button class="btn" onclick="location.href='templates.html'">Voir</button>
+        </div>
+        <div class="contact-card" tabindex="0">
+          <h3>⚙️ Automatisation</h3>
+          <p>Scripts Python pour gagner du temps</p>
+          <button class="btn" onclick="location.href='automatisation.html'">Voir</button>
+        </div>
+        <div class="contact-card" tabindex="0">
+          <h3>🧩 Support technique</h3>
+          <p>Aide rapide pour problèmes informatiques</p>
+          <button class="btn" onclick="location.href='assistance.html'">Contacter</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section centered-section" aria-label="Foire aux questions">
+      <h2 class="section-title">❓ Questions fréquentes</h2>
       <dl>
-        <dt>Quels types d’assistance informatique proposez-vous ?</dt>
-        <dd>Nous offrons dépannage, installation, configuration de PC, et support technique rapide pour particuliers et entreprises.</dd>
+        <dt tabindex="0" aria-expanded="false" aria-controls="faq1" id="q1">Quels types d’assistance informatique proposez-vous ?</dt>
+        <dd id="faq1" hidden>Nous offrons dépannage, installation, configuration de PC, et support technique rapide pour particuliers et entreprises.</dd>
 
-        <dt>Combien de temps prend la création d’un site web professionnel ?</dt>
-        <dd>Le délai dépend du projet, mais généralement entre 2 à 4 semaines selon vos besoins spécifiques.</dd>
+        <dt tabindex="0" aria-expanded="false" aria-controls="faq2" id="q2">Combien de temps prend la création d’un site web professionnel ?</dt>
+        <dd id="faq2" hidden>Le délai dépend du projet, mais généralement entre 2 à 4 semaines selon vos besoins spécifiques.</dd>
 
-        <dt>Proposez-vous des formations pour débutants ?</dt>
-        <dd>Oui, notre Digital Store propose des formations pratiques en SQL, Python, développement web et plus encore.</dd>
+        <dt tabindex="0" aria-expanded="false" aria-controls="faq3" id="q3">Proposez-vous des formations pour débutants ?</dt>
+        <dd id="faq3" hidden>Oui, notre Digital Store propose des formations pratiques en SQL, Python, développement web et plus encore.</dd>
       </dl>
     </section>
   </main>
@@ -139,14 +139,37 @@
   </footer>
 
   <script>
+    // Menu toggle for mobile
     function toggleMenu() {
       document.getElementById('menu').classList.toggle('active');
     }
     document.querySelector('.menu-toggle').addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') {
+      if(e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         toggleMenu();
       }
+    });
+
+    // FAQ toggle behavior
+    document.querySelectorAll('dt').forEach(dt => {
+      dt.addEventListener('click', () => {
+        const expanded = dt.getAttribute('aria-expanded') === 'true';
+        dt.setAttribute('aria-expanded', String(!expanded));
+        const dd = document.getElementById(dt.getAttribute('aria-controls'));
+        if(dd) {
+          if(expanded) {
+            dd.hidden = true;
+          } else {
+            dd.hidden = false;
+          }
+        }
+      });
+      dt.addEventListener('keydown', (e) => {
+        if(e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          dt.click();
+        }
+      });
     });
   </script>
 </body>
