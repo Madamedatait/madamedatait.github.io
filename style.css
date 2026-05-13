@@ -303,6 +303,7 @@ textarea{
   cursor:pointer;
   transition:0.3s;
   min-height:48px;
+  text-decoration: none;
 }
 
 .btn:hover{
