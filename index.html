@@ -2,20 +2,21 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#020617" />
   <title>MadameDataIT - Assistance informatique & création de sites web professionnels</title>
   <meta name="description" content="Assistance informatique, dépannage PC rapide et création de sites web professionnels. Solutions personnalisées pour entreprises et particuliers en France." />
-  <link rel="stylesheet" href="fonts.css">
   <link rel="icon" href="favicon.ico" />
-  <link rel="canonical" href="https://madamedatait.com/index.html/" />
- 
+  <link rel="canonical" href="https://madamedatait.com/" />
+  <link rel="stylesheet" href="style.css" />
+
   <!-- Open Graph -->
   <meta property="og:title" content="MadameDataIT - Assistance informatique & création de sites web professionnels" />
   <meta property="og:description" content="Dépannage PC rapide et création de sites web professionnels. Solutions personnalisées pour entreprises et particuliers en France." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://madamedatait.com/index.html" />
+  <meta property="og:url" content="https://madamedatait.com/" />
   <meta property="og:image" content="https://madamedatait.com/og-image.jpg" />
-  
+
   <!-- Données structurées JSON-LD -->
   <script type="application/ld+json">
   {
@@ -23,250 +24,24 @@
     "@type": "LocalBusiness",
     "name": "MadameDataIT",
     "description": "Assistance informatique et création de sites web professionnels.",
-    "url": "https://madamedatait.com/index.html",
+    "url": "https://madamedatait.com",
     "areaServed": "France"
   }
   </script>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DL3DERR55V"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-DL3DERR55V');
   </script>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #0f172a;
-      color: white;
-    }
-
-    /* HEADER */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px;
-      background: #020617;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    header h1 {
-      margin: 0;
-      color: #38bdf8;
-      font-size: 18px;
-    }
-
-    /* BURGER */
-    .menu-toggle {
-      font-size: 22px;
-      cursor: pointer;
-      display: none;
-      user-select: none;
-    }
-
-    /* NAV */
-    nav {
-      display: flex;
-      gap: 15px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-      opacity: 0.8;
-      transition: color 0.3s ease, opacity 0.3s ease;
-    }
-
-    nav a:hover,
-    nav a:focus {
-      opacity: 1;
-      color: #38bdf8;
-      outline: none;
-    }
-
-    /* MOBILE */
-    @media (max-width: 700px) {
-      .menu-toggle {
-        display: block;
-      }
-
-      nav {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: #020617;
-        flex-direction: column;
-        width: 200px;
-        padding: 15px;
-        display: none;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-        border-radius: 0 0 0 8px;
-      }
-
-      nav.active {
-        display: flex;
-      }
-
-      nav a {
-        padding: 10px 0;
-        font-size: 16px;
-      }
-    }
-
-    /* HERO */
-    .hero {
-      text-align: center;
-      padding: 30px 15px 20px;
-    }
-
-    .hero h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-      color: #38bdf8;
-    }
-
-    .hero p {
-      font-size: 16px;
-      color: #94a3b8;
-      max-width: 600px;
-      margin: 0 auto 20px;
-    }
-    
-    /* BUTTON */
-    .btn {
-      margin-top: 15px;
-      padding: 12px 24px;
-      background: #38bdf8;
-      border: none;
-      border-radius: 6px;
-      color: white;
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 16px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .btn:hover,
-    .btn:focus {
-      background-color: #0ea5e9;
-      outline: none;
-    }
-
-    /* SECTION */
-    .section {
-      padding: 20px 15px 40px;
-      text-align: center;
-    }
-
-    .section h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
-      color: #38bdf8;
-    }
-
-    /* CARDS */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .card {
-      background: #020617;
-      padding: 16px;
-      border-radius: 8px;
-      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover,
-    .card:focus-within {
-      transform: translateY(-5px);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      font-size: 18px;
-    }
-
-    .card p {
-      font-size: 14px;
-      color: #94a3b8;
-    }
-
-    /* FAQ */
-    dl {
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: left;
-      color: #cbd5e1;
-    }
-
-    dt {
-      font-weight: 700;
-      margin-top: 20px;
-      font-size: 16px;
-      color: #38bdf8;
-      cursor: pointer;
-    }
-
-    dd {
-      margin: 5px 0 0 15px;
-      font-size: 14px;
-      line-height: 1.5;
-      color: #94a3b8;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 15px 10px;
-      background: #020617;
-      margin-top: 20px;
-      font-size: 13px;
-      color: #94a3b8;
-    }
-
-    /* Social Buttons */
-    .social-buttons {
-      margin: 10px 0 5px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    .social-buttons a {
-      color: #38bdf8;
-      font-size: 22px;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .social-buttons a:hover,
-    .social-buttons a:focus {
-      color: #0ea5e9;
-      outline: none;
-    }
-  </style>
 </head>
 <body>
   <header>
     <h1>MadameDataIT</h1>
-
-    <!-- BURGER -->
-    <div class="menu-toggle" onclick="toggleMenu()" aria-label="Menu de navigation" role="button" tabindex="0">☰</div>
-
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Ouvrir le menu">☰</button>
     <nav id="menu" role="navigation">
       <a href="index.html">Accueil</a>
       <a href="assistance.html">🛠️ Assistance</a>
@@ -278,69 +53,67 @@
     </nav>
   </header>
 
-  <section class="hero" aria-label="Présentation principale">
-    <h1>Assistance informatique & création de sites web 💻</h1>
-    <p> MadameDataIT vous accompagne pour le dépannage informatique rapide, la création de sites web professionnels,
-      et l’automatisation de vos tâches numériques. Nous offrons des solutions personnalisées pour entreprises et particuliers
-      partout en France.</p>
-    <button class="btn" onclick="location.href='contact.html'">Contactez-nous</button>
-  </section>
+  <main>
+    <section class="hero" aria-label="Présentation principale">
+      <h1>Assistance informatique & création de sites web 💻</h1>
+      <p>
+        MadameDataIT vous accompagne pour le dépannage informatique rapide, la création de sites web professionnels,
+        et l’automatisation de vos tâches numériques. Nous offrons des solutions personnalisées pour entreprises et particuliers
+        partout en France.
+      </p>
+      <button class="btn" onclick="location.href='contact.html'">Contactez-nous</button>
+    </section>
 
-  <section class="section" aria-label="Services disponibles">
-    <h2>🔥 Services disponibles</h2>
-
-    <div class="cards">
-      <div class="card" tabindex="0">
-        <h3>🛠️ Assistance informatique</h3>
-        <p>Dépannage, installation, configuration PC</p>
-        <button class="btn" onclick="location.href='assistance.html'">Demander</button>
+    <section class="section" aria-label="Services disponibles">
+      <h2>🔥 Services disponibles</h2>
+      <div class="cards">
+        <article class="card" tabindex="0">
+          <h3>🛠️ Assistance informatique</h3>
+          <p>Dépannage, installation, configuration PC</p>
+          <button class="btn" onclick="location.href='assistance.html'">Demander</button>
+        </article>
+        <article class="card" tabindex="0">
+          <h3>🌐 Création de sites web</h3>
+          <p>Site vitrine professionnel pour business</p>
+          <button class="btn" onclick="location.href='sites.html'">Commander</button>
+        </article>
+        <article class="card" tabindex="0">
+          <h3>💰 Digital Store</h3>
+          <p>Apprentissage pratique (SQL, Python, Web et autres)</p>
+          <button class="btn" onclick="location.href='formations.html'">Voir</button>
+        </article>
+        <article class="card" tabindex="0">
+          <h3>💻 Templates</h3>
+          <p>Sites, designs et projets utilisables directement</p>
+          <button class="btn" onclick="location.href='templates.html'">Voir</button>
+        </article>
+        <article class="card" tabindex="0">
+          <h3>⚙️ Automatisation</h3>
+          <p>Scripts Python pour gagner du temps</p>
+          <button class="btn" onclick="location.href='automatisation.html'">Voir</button>
+        </article>
+        <article class="card" tabindex="0">
+          <h3>🧩 Support technique</h3>
+          <p>Aide rapide pour problèmes informatiques</p>
+          <button class="btn" onclick="location.href='assistance.html'">Contacter</button>
+        </article>
       </div>
+    </section>
 
-      <div class="card" tabindex="0">
-        <h3>🌐 Création de sites web</h3>
-        <p>Site vitrine professionnel pour business</p>
-        <button class="btn" onclick="location.href='sites.html'">Commander</button>
-      </div>
+    <section class="section" aria-label="Foire aux questions">
+      <h2>❓ Questions fréquentes</h2>
+      <dl>
+        <dt>Quels types d’assistance informatique proposez-vous ?</dt>
+        <dd>Nous offrons dépannage, installation, configuration de PC, et support technique rapide pour particuliers et entreprises.</dd>
 
-      <div class="card" tabindex="0">
-        <h3>💰 Digital Store</h3>
-        <p>Apprentissage pratique (SQL, Python, Web et autres)</p>
-        <button class="btn" onclick="location.href='formations.html'">Voir</button>
-      </div>
+        <dt>Combien de temps prend la création d’un site web professionnel ?</dt>
+        <dd>Le délai dépend du projet, mais généralement entre 2 à 4 semaines selon vos besoins spécifiques.</dd>
 
-      <div class="card" tabindex="0">
-        <h3>💻 Templates</h3>
-        <p>Sites, designs et projets utilisables directement</p>
-        <button class="btn" onclick="location.href='templates.html'">Voir</button>
-      </div>
-
-      <div class="card" tabindex="0">
-        <h3>⚙️ Automatisation</h3>
-        <p>Scripts Python pour gagner du temps</p>
-        <button class="btn" onclick="location.href='automatisation.html'">Voir</button>
-      </div>
-
-      <div class="card" tabindex="0">
-        <h3>🧩 Support technique</h3>
-        <p>Aide rapide pour problèmes informatiques</p>
-        <button class="btn" onclick="location.href='assistance.html'">Contacter</button>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" aria-label="Foire aux questions">
-    <h2>❓ Questions fréquentes</h2>
-    <dl>
-      <dt>Quels types d’assistance informatique proposez-vous ?</dt>
-      <dd>Nous offrons dépannage, installation, configuration de PC, et support technique rapide pour particuliers et entreprises.</dd>
-
-      <dt>Combien de temps prend la création d’un site web professionnel ?</dt>
-      <dd>Le délai dépend du projet, mais généralement entre 2 à 4 semaines selon vos besoins spécifiques.</dd>
-
-      <dt>Proposez-vous des formations pour débutants ?</dt>
-      <dd>Oui, notre Digital Store propose des formations pratiques en SQL, Python, développement web et plus encore.</dd>
-    </dl>
-  </section>
+        <dt>Proposez-vous des formations pour débutants ?</dt>
+        <dd>Oui, notre Digital Store propose des formations pratiques en SQL, Python, développement web et plus encore.</dd>
+      </dl>
+    </section>
+  </main>
 
   <footer>
     <div class="social-buttons" aria-label="Liens vers réseaux sociaux">
@@ -367,7 +140,6 @@
     function toggleMenu() {
       document.getElementById('menu').classList.toggle('active');
     }
-    // Support clavier pour menu burger
     document.querySelector('.menu-toggle').addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
