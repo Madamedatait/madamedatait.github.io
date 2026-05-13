@@ -159,6 +159,15 @@ nav a:hover{
 .centered-section h2 {
   text-align: center;
 }
+
+.section-title {
+  color: #38bdf8;
+  font-weight: 700; /* optionnel : pour renforcer le titre */
+  margin-bottom: 20px;
+  text-align: center; /* pour centrer le titre */
+}
+
+
 /* ===================================
    CONTACT INFO
 =================================== */
