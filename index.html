@@ -1,176 +1,184 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#020617" />
-  <title>MadameDataIT - Assistance informatique & création de sites web professionnels</title>
-  <meta name="description" content="Assistance informatique, dépannage PC rapide et création de sites web professionnels. Solutions personnalisées pour entreprises et particuliers en France." />
-  <link rel="icon" href="favicon.ico" />
-  <link rel="canonical" href="https://madamedatait.com/" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preload" href="./poppins-v24-latin/poppins-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="./poppins-v24-latin/poppins-v24-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#020617" />
+<title>MadameDataIT - Data Analyst & Développeuse Web Freelance</title>
+<meta name="description" content="Data Analyst & développeuse web freelance, 100% remote. SQL, Python, Power BI, Looker Studio, Streamlit, automatisation Make et création de sites web pour freelances et TPE/PME." />
+<link rel="icon" href="favicon.ico" />
+<link rel="canonical" href="https://madamedatait.com/" />
+<link rel="stylesheet" href="style.css" />
+<link rel="preload" href="./poppins-v24-latin/poppins-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="./poppins-v24-latin/poppins-v24-latin-700.woff2" as="font" type="font/woff2" crossorigin />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="MadameDataIT - Assistance informatique & création de sites web professionnels" />
-  <meta property="og:description" content="Dépannage PC rapide et création de sites web professionnels. Solutions personnalisées pour entreprises et particuliers en France." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://madamedatait.com/" />
-  <meta property="og:image" content="https://madamedatait.com/og-image.jpg" />
+<!-- Open Graph -->
+<meta property="og:title" content="MadameDataIT - Data Analyst & Développeuse Web Freelance" />
+<meta property="og:description" content="SQL, Python, Power BI, Looker Studio, Streamlit, automatisation Make et création de sites web. Freelance 100% remote pour freelances et TPE/PME." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://madamedatait.com/" />
+<meta property="og:image" content="https://madamedatait.com/og-image.jpg" />
 
-  <!-- Données structurées JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "MadameDataIT",
-    "description": "Assistance informatique et création de sites web professionnels.",
-    "url": "https://madamedatait.com",
-    "areaServed": "France"
-  }
-  </script>
+<!-- Données structurées JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "MadameDataIT",
+  "description": "Data Analyst & développeuse web freelance : analyse de données, dashboards Power BI / Looker Studio, automatisation Make et création de sites web pour freelances et TPE/PME.",
+  "url": "https://madamedatait.com",
+  "areaServed": "France",
+  "knowsAbout": ["SQL", "Python", "Power BI", "Looker Studio", "Streamlit", "Automatisation Make", "Développement web Flask"]
+}
+</script>
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DL3DERR55V"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DL3DERR55V');
-  </script>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DL3DERR55V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DL3DERR55V');
+</script>
 </head>
 <body>
-  <header>
-    <h1>MadameDataIT</h1>
-    <div class="menu-toggle" onclick="toggleMenu()" aria-label="Menu de navigation" role="button" tabindex="0">☰</div>
-    <nav id="menu" role="navigation" aria-label="Menu principal">
-      <a href="index.html">Accueil</a>
-      <a href="assistance.html">🛠️ Assistance</a>
-      <a href="sites.html">🌐 Sites Web</a>
-      <a href="formations.html">💰 Digital Store</a>
-      <a href="templates.html">💻 Templates</a>
-      <a href="automatisation.html">⚙️ Automatisation</a>
-      <a href="contact.html">📞 Contact</a>
-    </nav>
-  </header>
+<header>
+  <h1>MadameDataIT</h1>
+  <div class="menu-toggle" onclick="toggleMenu()" aria-label="Menu de navigation" role="button" tabindex="0">☰</div>
+  <nav id="menu" role="navigation" aria-label="Menu principal">
+    <a href="index.html">Accueil</a>
+    <a href="services.html">🛠️ Services</a>
+    <a href="portfolio.html">📁 Portfolio</a>
+    <a href="contact.html">📞 Contact</a>
+  </nav>
+</header>
 
-  <main>
-    <section class="hero" aria-label="Présentation principale">
-      <h1>Assistance informatique & création de sites web 💻</h1>
-      <p>
-        MadameDataIT vous accompagne pour le dépannage informatique rapide, la création de sites web professionnels,
-        et l’automatisation de vos tâches numériques. Nous offrons des solutions personnalisées pour entreprises et particuliers
-        partout en France.
-      </p>
-      <button class="btn" onclick="location.href='contact.html'">Contactez-nous</button>
-    </section>
+<main>
+  <section class="hero" aria-label="Présentation principale">
+    <h1>Data Analyst & Développeuse Web · Freelance 100% remote 📊</h1>
+    <p>
+      Forte de 4 ans d'expérience en système d'information hospitalier critique (APHP, +500 utilisateurs),
+      j'accompagne aujourd'hui freelances et TPE/PME dans l'analyse de leurs données, la création de
+      dashboards (Power BI, Looker Studio), l'automatisation de leurs tâches (Make) et la création de
+      sites web professionnels (Flask, HTML/CSS).
+    </p>
+    <p>
+      Mon parcours IT me donne une compréhension rare des données à la source : leur production, leur
+      qualité et leur sécurité.
+    </p>
+    <button class="btn" onclick="location.href='contact.html'">Me contacter</button>
+    <button class="btn" onclick="location.href='portfolio.html'">Voir mes projets</button>
+  </section>
 
-    <section class="section" aria-label="Services disponibles">
-      <h2 class="section-title">🔥 Services disponibles</h2>
-      <div class="contact-section">
-        <div class="contact-card" tabindex="0">
-          <h3>🛠️ Assistance informatique</h3>
-          <p>Dépannage, installation, configuration PC</p>
-          <button class="btn" onclick="location.href='assistance.html'">Demander</button>
-        </div>
-        <div class="contact-card" tabindex="0">
-          <h3>🌐 Création de sites web</h3>
-          <p>Site vitrine professionnel pour business</p>
-          <button class="btn" onclick="location.href='sites.html'">Commander</button>
-        </div>
-        <div class="contact-card" tabindex="0">
-          <h3>💰 Digital Store</h3>
-          <p>Apprentissage pratique (SQL, Python, Web et autres)</p>
-          <button class="btn" onclick="location.href='formations.html'">Voir</button>
-        </div>
-        <div class="contact-card" tabindex="0">
-          <h3>💻 Templates</h3>
-          <p>Sites, designs et projets utilisables directement</p>
-          <button class="btn" onclick="location.href='templates.html'">Voir</button>
-        </div>
-        <div class="contact-card" tabindex="0">
-          <h3>⚙️ Automatisation</h3>
-          <p>Scripts Python pour gagner du temps</p>
-          <button class="btn" onclick="location.href='automatisation.html'">Voir</button>
-        </div>
-        <div class="contact-card" tabindex="0">
-          <h3>🧩 Support technique</h3>
-          <p>Aide rapide pour problèmes informatiques</p>
-          <button class="btn" onclick="location.href='assistance.html'">Contacter</button>
-        </div>
+  <section class="section" aria-label="Services disponibles">
+    <h2 class="section-title">🔥 Ce que je peux faire pour vous</h2>
+    <div class="contact-section">
+      <div class="contact-card" tabindex="0">
+        <h3>📊 Dashboards & Reporting</h3>
+        <p>Tableaux de bord Power BI ou Looker Studio pour visualiser et piloter votre activité.</p>
+        <button class="btn" onclick="location.href='services.html'">En savoir plus</button>
       </div>
-    </section>
-
-    <section class="section centered-section" aria-label="Foire aux questions">
-      <h2 class="section-title">❓ Questions fréquentes</h2>
-      <dl>
-        <dt tabindex="0" aria-expanded="false" aria-controls="faq1" id="q1">Quels types d’assistance informatique proposez-vous ?</dt>
-        <dd id="faq1" hidden>Nous offrons dépannage, installation, configuration de PC, et support technique rapide pour particuliers et entreprises.</dd>
-
-        <dt tabindex="0" aria-expanded="false" aria-controls="faq2" id="q2">Combien de temps prend la création d’un site web professionnel ?</dt>
-        <dd id="faq2" hidden>Le délai dépend du projet, mais généralement entre 2 à 4 semaines selon vos besoins spécifiques.</dd>
-
-        <dt tabindex="0" aria-expanded="false" aria-controls="faq3" id="q3">Proposez-vous des formations pour débutants ?</dt>
-        <dd id="faq3" hidden>Oui, notre Digital Store propose des formations pratiques en SQL, Python, développement web et plus encore.</dd>
-      </dl>
-    </section>
-  </main>
-
-  <footer>
-    <div class="social-buttons" aria-label="Liens vers réseaux sociaux">
-      <a href="https://www.facebook.com/madamedatait" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#38bdf8" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M22 12a10 10 0 1 0-11.5 9.87v-6.99h-2.3v-2.88h2.3v-2.2c0-2.28 1.36-3.54 3.44-3.54.99 0 2.02.18 2.02.18v2.22h-1.14c-1.12 0-1.47.7-1.47 1.42v1.92h2.5l-.4 2.88h-2.1v6.99A10 10 0 0 0 22 12z"/>
-        </svg>
-      </a>
-      <a href="https://www.instagram.com/madamedatait" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#38bdf8" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.75-.88a1.12 1.12 0 1 1 0 2.25 1.12 1.12 0 0 1 0-2.25z"/>
-        </svg>
-      </a>
-      <a href="https://www.tiktok.com/@madamedatait" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok" style="display:inline-block; vertical-align:middle;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24" fill="#38bdf8" aria-hidden="true">
-          <path d="M448,209.91a210.75,210.75,0,0,1-65.88-10.14v95.52a110.84,110.84,0,1,1-110.84-110.84V0h38.14A173.74,173.74,0,0,0,379.79,73.18,186.81,186.81,0,0,0,448,209.91Z"/>
-        </svg>
-      </a>
+      <div class="contact-card" tabindex="0">
+        <h3>🔍 Analyse de données</h3>
+        <p>Nettoyage, traitement et visualisation de vos données avec Python (Pandas) et SQL.</p>
+        <button class="btn" onclick="location.href='services.html'">En savoir plus</button>
+      </div>
+      <div class="contact-card" tabindex="0">
+        <h3>⚙️ Automatisation</h3>
+        <p>Connexion de vos outils et automatisation de vos tâches répétitives avec Make.</p>
+        <button class="btn" onclick="location.href='services.html'">En savoir plus</button>
+      </div>
+      <div class="contact-card" tabindex="0">
+        <h3>🌐 Création de sites web</h3>
+        <p>Sites vitrines professionnels (Flask, HTML/CSS), responsives et optimisés SEO.</p>
+        <button class="btn" onclick="location.href='sites.html'">En savoir plus</button>
+      </div>
     </div>
-    <p>© 2026 MadameDataIT - Tous droits réservés</p>
-  </footer>
+  </section>
 
-  <script>
-    // Menu toggle for mobile
-    function toggleMenu() {
-      document.getElementById('menu').classList.toggle('active');
+  <section class="section centered-section" aria-label="À propos">
+    <h2 class="section-title">👩‍💻 Qui suis-je ?</h2>
+    <p>
+      Après plusieurs années comme technicienne informatique dans un environnement hospitalier critique,
+      j'ai choisi de me spécialiser dans la data. J'ai suivi une formation en Data Analyst et j'ai
+      complété mon profil avec une Licence Informatique et un Technicien Supérieur Systèmes & Réseaux.
+    </p>
+    <p>
+      Mon avantage : je ne fais pas que "lire" les données, je comprends d'où elles viennent, comment
+      elles sont produites et sécurisées. Cette double compétence IT + Data est ce qui me différencie.
+    </p>
+    <button class="btn" onclick="location.href='portfolio.html'">Découvrir mes projets</button>
+  </section>
+
+  <section class="section centered-section" aria-label="Foire aux questions">
+    <h2 class="section-title">❓ Questions fréquentes</h2>
+    <dl>
+      <dt tabindex="0" aria-expanded="false" aria-controls="faq1" id="q1">Quels services proposez-vous exactement ?</dt>
+      <dd id="faq1" hidden>J'interviens sur l'analyse de données (Python, SQL), la création de dashboards (Power BI, Looker Studio), l'automatisation de tâches (Make) et la création de sites web (Flask, HTML/CSS).</dd>
+
+      <dt tabindex="0" aria-expanded="false" aria-controls="faq2" id="q2">Travaillez-vous uniquement en remote ?</dt>
+      <dd id="faq2" hidden>Oui, je travaille 100% à distance, ce qui me permet de collaborer avec des clients partout en France (et au-delà).</dd>
+
+      <dt tabindex="0" aria-expanded="false" aria-controls="faq3" id="q3">Comment se déroule une collaboration ?</dt>
+      <dd id="faq3" hidden>On échange d'abord sur votre besoin via le formulaire de contact ou LinkedIn, puis je vous propose un cadrage simple (objectif, livrables, délai) avant de démarrer.</dd>
+    </dl>
+  </section>
+</main>
+
+<footer>
+  <div class="social-buttons" aria-label="Liens vers réseaux sociaux">
+    <a href="https://www.facebook.com/madamedatait" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#38bdf8" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M22 12a10 10 0 1 0-11.5 9.87v-6.99h-2.3v-2.88h2.3v-2.2c0-2.28 1.36-3.54 3.44-3.54.99 0 2.02.18 2.02.18v2.22h-1.14c-1.12 0-1.47.7-1.47 1.42v1.92h2.5l-.4 2.88h-2.1v6.99A10 10 0 0 0 22 12z"/>
+      </svg>
+    </a>
+    <a href="https://www.instagram.com/madamedatait" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#38bdf8" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.75-.88a1.12 1.12 0 1 1 0 2.25 1.12 1.12 0 0 1 0-2.25z"/>
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/in/votre-profil" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#38bdf8" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.13 1.45-2.13 2.94v5.66H9.37V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
+      </svg>
+    </a>
+  </div>
+  <p>© 2026 MadameDataIT - Tous droits réservés</p>
+</footer>
+
+<script>
+  // Menu toggle for mobile
+  function toggleMenu() {
+    document.getElementById('menu').classList.toggle('active');
+  }
+  document.querySelector('.menu-toggle').addEventListener('keydown', function (e) {
+    if(e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleMenu();
     }
-    document.querySelector('.menu-toggle').addEventListener('keydown', function (e) {
-      if(e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        toggleMenu();
+  });
+
+  // FAQ toggle behavior
+  document.querySelectorAll('dt').forEach(dt => {
+    dt.addEventListener('click', () => {
+      const expanded = dt.getAttribute('aria-expanded') === 'true';
+      dt.setAttribute('aria-expanded', String(!expanded));
+      const dd = document.getElementById(dt.getAttribute('aria-controls'));
+      if(dd) {
+        if(expanded) {
+          dd.hidden = true;
+        } else {
+          dd.hidden = false;
+        }
       }
     });
-
-    // FAQ toggle behavior
-    document.querySelectorAll('dt').forEach(dt => {
-      dt.addEventListener('click', () => {
-        const expanded = dt.getAttribute('aria-expanded') === 'true';
-        dt.setAttribute('aria-expanded', String(!expanded));
-        const dd = document.getElementById(dt.getAttribute('aria-controls'));
-        if(dd) {
-          if(expanded) {
-            dd.hidden = true;
-          } else {
-            dd.hidden = false;
-          }
-        }
-      });
-      dt.addEventListener('keydown', (e) => {
-        if(e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          dt.click();
-        }
-      });
+    dt.addEventListener('keydown', (e) => {
+      if(e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        dt.click();
+      }
     });
-  </script>
+  });
+</script>
 </body>
 </html>
