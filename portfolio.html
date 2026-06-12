@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#020617" />
+<title>Portfolio - Projets Data & Web | MadameDataIT</title>
+<meta name="description" content="Projets data et web réalisés par MadameDataIT : sites web, dashboards Power BI / Looker Studio, automatisations Make et analyses Python/SQL." />
+<link rel="icon" href="favicon.ico" />
+<link rel="canonical" href="https://madamedatait.com/portfolio.html" />
+<link rel="stylesheet" href="style.css" />
+<link rel="preload" href="./poppins-v24-latin/poppins-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="./poppins-v24-latin/poppins-v24-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Portfolio - Projets Data & Web | MadameDataIT" />
+<meta property="og:description" content="Sites web, dashboards Power BI / Looker Studio, automatisations Make et analyses Python/SQL réalisés par MadameDataIT." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://madamedatait.com/portfolio.html" />
+<meta property="og:image" content="https://madamedatait.com/og-image.jpg" />
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DL3DERR55V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DL3DERR55V');
+</script>
+</head>
+<body>
+<header>
+  <h1>MadameDataIT</h1>
+  <div class="menu-toggle" onclick="toggleMenu()" aria-label="Menu de navigation" role="button" tabindex="0">☰</div>
+  <nav id="menu" role="navigation" aria-label="Menu principal">
+    <a href="index.html">Accueil</a>
+    <a href="services.html">🛠️ Services</a>
+    <a href="portfolio.html">📁 Portfolio</a>
+    <a href="contact.html">📞 Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" aria-label="Présentation du portfolio">
+    <h1>📁 Mes projets</h1>
+    <p>
+      Une sélection de projets qui montrent concrètement ce que je sais faire : développement web,
+      analyse de données, dashboards et automatisation. Cette page s'enrichit au fil de mes réalisations.
+    </p>
+  </section>
+
+  <section class="section" aria-label="Projets réalisés">
+    <h2 class="section-title">✅ Projets réalisés</h2>
+    <div class="contact-section">
+      <div class="contact-card" tabindex="0">
+        <h3>🌐 Site web CJBAT</h3>
+        <p>
+          Site web développé et déployé en production avec Flask, HTML/CSS. Mis en ligne et utilisé en
+          conditions réelles.
+        </p>
+        <p><em>Stack : Python (Flask), HTML, CSS</em></p>
+        <button class="btn" onclick="location.href='https://github.com/Madamedatait'" >Voir sur GitHub</button>
+      </div>
+
+      <div class="contact-card" tabindex="0">
+        <h3>🌐 Site vitrine MadameDataIT</h3>
+        <p>
+          Ce site : conçu et développé en HTML/CSS pur, hébergé sur GitHub Pages avec domaine personnalisé,
+          SEO optimisé (sitemap, meta tags, score 100/100).
+        </p>
+        <p><em>Stack : HTML5, CSS3, GitHub Pages</em></p>
+        <button class="btn" onclick="location.href='https://github.com/Madamedatait/madamedatait.github.io'">Voir le code</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Projets en préparation">
+    <h2 class="section-title">🚧 Prochains projets (en préparation)</h2>
+    <div class="contact-section">
+      <div class="contact-card" tabindex="0">
+        <h3>📊 Dashboard Power BI / Looker Studio</h3>
+        <p>Tableau de bord interactif sur un jeu de données public, avec storytelling et visualisations clés.</p>
+        <p><em>Stack : Power BI ou Looker Studio</em></p>
+      </div>
+      <div class="contact-card" tabindex="0">
+        <h3>🔍 Analyse de données Python</h3>
+        <p>Analyse complète d'un dataset (Kaggle ou autre) : nettoyage avec Pandas, visualisation avec Plotly, application Streamlit.</p>
+        <p><em>Stack : Python, Pandas, Plotly, Streamlit</em></p>
+      </div>
+      <div class="contact-card" tabindex="0">
+        <h3>⚙️ Automatisation Make</h3>
+        <p>Workflow d'automatisation connectant plusieurs applications via APIs REST et Google Sheets.</p>
+        <p><em>Stack : Make, APIs REST, Google Sheets</em></p>
+      </div>
+      <div class="contact-card" tabindex="0">
+        <h3>🗄️ Analyse SQL</h3>
+        <p>Requêtes SQL sur un dataset, nettoyage des données et visualisation des résultats.</p>
+        <p><em>Stack : SQL</em></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section centered-section" aria-label="Appel à l'action">
+    <h2 class="section-title">Vous avez un projet ?</h2>
+    <p>Que ce soit pour un site web, un dashboard ou une automatisation, parlons-en.</p>
+    <button class="btn" onclick="location.href='contact.html'">Me contacter</button>
+  </section>
+</main>
+
+<footer>
+  <div class="social-buttons" aria-label="Liens vers réseaux sociaux">
+    <a href="https://www.facebook.com/madamedatait" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#38bdf8" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M22 12a10 10 0 1 0-11.5 9.87v-6.99h-2.3v-2.88h2.3v-2.2c0-2.28 1.36-3.54 3.44-3.54.99 0 2.02.18 2.02.18v2.22h-1.14c-1.12 0-1.47.7-1.47 1.42v1.92h2.5l-.4 2.88h-2.1v6.99A10 10 0 0 0 22 12z"/>
+      </svg>
+    </a>
+    <a href="https://www.instagram.com/madamedatait" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#38bdf8" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.75-.88a1.12 1.12 0 1 1 0 2.25 1.12 1.12 0 0 1 0-2.25z"/>
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/in/votre-profil" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#38bdf8" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.13 1.45-2.13 2.94v5.66H9.37V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
+      </svg>
+    </a>
+  </div>
+  <p>© 2026 MadameDataIT - Tous droits réservés</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('menu').classList.toggle('active');
+  }
+  document.querySelector('.menu-toggle').addEventListener('keydown', function (e) {
+    if(e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleMenu();
+    }
+  });
+</script>
+</body>
+</html>
