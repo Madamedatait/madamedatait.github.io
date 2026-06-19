@@ -3,6 +3,9 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
+current_dir = os.path.dirname(__file__)
+csv_path = os.path.join(current_dir, "train.csv")
 df=pd.read_csv("train.csv")
 st.title("Projet de classification binaire Titanic")
 st.sidebar.title("Sommaire")
