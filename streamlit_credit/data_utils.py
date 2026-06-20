@@ -20,7 +20,10 @@ DURATION_LABELS = ["Court terme (≤10 mois)", "Moyen terme (11-30 mois)", "Long
 
 @st.cache_data
 def load_data(path: str = "data/german_credit_data.csv") -> pd.DataFrame:
-    df = pd.read_csv(path, index_col=0)
+    import os
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    full_path = os.path.join(current_dir, path)
+    df = pd.read_csv(full_path, index_col=0)
 
     # Harmonise les noms de colonnes (espaces -> underscores, snake_case)
     df = df.rename(columns={
