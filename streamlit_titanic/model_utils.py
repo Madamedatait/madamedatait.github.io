@@ -17,7 +17,7 @@ NUM_COLS = ["Age", "Fare", "SibSp", "Parch"]
 
 
 @st.cache_data
-def load_data(path: str = "data/train.csv") -> pd.DataFrame:
+def load_data(path: str = "train.csv") -> pd.DataFrame:
     current_dir = os.path.dirname(os.path.abspath(__file__))
     full_path = os.path.join(current_dir, path)
     return pd.read_csv(full_path)
