@@ -1,6 +1,5 @@
 # ⚙️ Automatisation de Prise de Rendez-vous — Make
 
-**Auteure :** Lavinia Bulgarean-Haiduc
 **Stack :** Make (Integromat), Google Sheets, Google Calendar
 **Objectif :** Éliminer la saisie manuelle des rendez-vous en connectant un formulaire de prise de rendez-vous directement à un agenda partagé.
 
@@ -86,4 +85,3 @@ Ce type d'automatisation permet de :
 La même logique (formulaire → tableur → agenda) s'applique facilement à d'autres métiers : prise de rendez-vous chez un coach, réservation de créneaux pour un consultant, inscriptions à un atelier, demandes de rappel commercial... Le scénario peut être enrichi avec des modules supplémentaires : envoi d'un email de confirmation au patient, notification Slack à l'équipe, ou vérification de disponibilité avant la création de l'événement.
 
 ---
-*Projet réalisé dans le cadre de ma formation Data Analyst · [madamedatait.com](https://madamedatait.com)*
