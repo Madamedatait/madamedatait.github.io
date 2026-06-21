@@ -1,6 +1,5 @@
 # 📊 Analyse de Performance Commerciale — SQL
 
-**Auteure :** Lavinia Bulgarean-Haiduc
 **Stack :** SQL (SQLite) — JOIN, GROUP BY, CTE, Window Functions
 **Objectif :** Analyser les performances de vente d'une entreprise à partir de 3 tables relationnelles (employés, ventes, produits) afin d'identifier les meilleurs vendeurs, les tendances mensuelles et la répartition du catalogue produit.
 
@@ -207,4 +206,3 @@ Ce projet illustre un éventail de compétences SQL essentielles pour l'analyse 
 Ces techniques sont directement applicables à des problématiques réelles de pilotage commercial : identification des top performers, suivi d'objectifs, segmentation produit.
 
 ---
-*Projet réalisé dans le cadre de ma formation Data Analyst · [madamedatait.com](https://madamedatait.com)*
