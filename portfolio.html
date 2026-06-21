@@ -202,6 +202,40 @@ et cliquez sur "Yes, get this app back up!" — le réveil prend environ 30 seco
 
 <div class="contact-card" tabindex="0">
 <h3>🗄️ Analyse de Performance Commerciale — SQL</h3>
+<div style="background:#0f172a; border-radius:8px; padding:0.75rem; margin-bottom:0.75rem; overflow-x:auto;">
+<table style="width:100%; border-collapse:collapse; font-size:0.85rem; color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid #38bdf8;">
+<th style="text-align:left; padding:0.4rem 0.5rem; color:#38bdf8;">Rang</th>
+<th style="text-align:left; padding:0.4rem 0.5rem; color:#38bdf8;">Employé</th>
+<th style="text-align:right; padding:0.4rem 0.5rem; color:#38bdf8;">Total ventes</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid #1e293b;">
+<td style="padding:0.4rem 0.5rem;">1</td>
+<td style="padding:0.4rem 0.5rem;">Donald Fisher</td>
+<td style="text-align:right; padding:0.4rem 0.5rem;">526 403 €</td>
+</tr>
+<tr style="border-bottom:1px solid #1e293b;">
+<td style="padding:0.4rem 0.5rem;">2</td>
+<td style="padding:0.4rem 0.5rem;">Whitney Mason</td>
+<td style="text-align:right; padding:0.4rem 0.5rem;">475 518 €</td>
+</tr>
+<tr style="border-bottom:1px solid #1e293b;">
+<td style="padding:0.4rem 0.5rem;">3</td>
+<td style="padding:0.4rem 0.5rem;">Jack Cook</td>
+<td style="text-align:right; padding:0.4rem 0.5rem;">472 665 €</td>
+</tr>
+<tr>
+<td style="padding:0.4rem 0.5rem;">4</td>
+<td style="padding:0.4rem 0.5rem;">Jenna Bass</td>
+<td style="text-align:right; padding:0.4rem 0.5rem;">460 438 €</td>
+</tr>
+</tbody>
+</table>
+<p style="font-size:0.75rem; color:#64748b; margin:0.5rem 0 0 0; font-family:monospace;">RANK() OVER (ORDER BY total_sales DESC)</p>
+</div>
 <p>
 Analyse de performances de vente à partir d'une base de données relationnelle
 (employés, ventes, produits) : classement des meilleurs vendeurs, suivi du
