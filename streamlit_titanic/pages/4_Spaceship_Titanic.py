@@ -456,13 +456,18 @@ st.dataframe(
     use_container_width=True
 )
 
-import plotly.figure_factory as ff
+import plotly.graph_objects as go
 
-fig_cm = ff.create_annotated_heatmap(
-    cm,
-    x=["Prédit : False", "Prédit : True"],
-    y=["Réel : False", "Réel : True"],
-    colorscale="Blues"
+fig_cm = go.Figure(
+    data=go.Heatmap(
+        z=cm,
+        x=["Prédit : False", "Prédit : True"],
+        y=["Réel : False", "Réel : True"],
+        text=cm,
+        texttemplate="%{text}",
+        textfont={"size": 20},
+        hovertemplate="Nombre : %{z}<extra></extra>"
+    )
 )
 
 fig_cm.update_layout(
