@@ -8,17 +8,42 @@ st.set_page_config(
 )
 
 st.title("🚀 Spaceship Titanic")
-st.subheader("Prédiction des passagers transportés vers une autre dimension")
+st.subheader("Extension du projet Titanic — Machine Learning")
 
 st.markdown("""
+
+### 🔗 Une extension du projet Titanic
+
+Les quatre premières pages de ce projet utilisent le jeu de données
+**Titanic historique**, qui contient **891 passagers**.
+
+Cette page utilise un second jeu de données, **Spaceship Titanic**.
+Il s'agit d'un dataset différent, mais basé sur le même principe de
+**classification supervisée** : utiliser les caractéristiques des
+passagers pour prédire leur destin.
+
+Dans cette nouvelle version futuriste :
+
+* 👥 **8 693 passagers** ont un destin connu et servent à entraîner le modèle ;
+* ❓ **4 277 passagers** ont un destin inconnu et doivent être prédits.
+
+Soit **12 970 passagers** au total.
+
 ### 🎯 Objectif
 
 Le Spaceship Titanic a perdu une partie de ses passagers lors d'une
 collision avec une anomalie spatio-temporelle.
 
-L'objectif est de construire un modèle de Machine Learning capable de
-prédire quels passagers ont été **Transported** vers une autre dimension.
+L'objectif est de construire un modèle de **Machine Learning** capable
+de prédire quels passagers ont été **Transported** vers une autre
+dimension.
+
+Cette partie permet ainsi d'aller plus loin dans le projet Titanic en
+mettant en œuvre le **prétraitement des données, l'encodage des variables
+catégorielles, la comparaison de modèles, l'analyse des erreurs et la
+prédiction sur de nouvelles données**.
 """)
+
 
 # Chargement des données
 import os
@@ -586,4 +611,99 @@ st.success(
     f"environ **{nb_transported:,} passagers** parmi les "
     f"{len(test):,} passagers inconnus auraient été transportés "
     f"vers une autre dimension."
+)
+
+# ============================================================
+# 🚀 PRÉDICTION DES PASSAGERS INCONNUS
+# ============================================================
+
+st.markdown("## 🚀 Prédiction des passagers inconnus")
+
+st.markdown("""
+Nous appliquons maintenant le même prétraitement aux 4 277 passagers
+dont le destin est inconnu afin d'estimer combien ont été transportés
+vers une autre dimension.
+""")
+
+# Copie du jeu de données inconnu
+missing = test.copy()
+
+# Suppression des variables non utilisées
+missing = missing.drop(
+    columns=["Name", "PassengerId", "Cabin"],
+    errors="ignore"
+)
+
+# Séparation numérique / catégorielle
+missing_num = missing[num_cols]
+missing_cat = missing[cat_cols]
+
+# Imputation numérique
+missing_num_imputed = pd.DataFrame(
+    imputer_num.transform(missing_num),
+    columns=num_cols,
+    index=missing.index
+)
+
+# Imputation catégorielle
+missing_cat_imputed = pd.DataFrame(
+    imputer_cat.transform(missing_cat),
+    columns=cat_cols,
+    index=missing.index
+)
+
+# Encodage catégoriel
+missing_cat_encoded = pd.DataFrame(
+    encoder.transform(missing_cat_imputed),
+    columns=encoder.get_feature_names_out(cat_cols),
+    index=missing.index
+)
+
+# Reconstitution des données
+X_missing_final = pd.concat(
+    [
+        missing_num_imputed,
+        missing_cat_encoded
+    ],
+    axis=1
+)
+
+# Prédictions
+predictions = best_model.predict(X_missing_final)
+
+# Nombre de passagers prédits comme transportés
+nb_transported = int(predictions.sum())
+
+# Nombre de passagers prédits comme non transportés
+nb_not_transported = len(predictions) - nb_transported
+
+st.markdown("### 🔮 Résultat des prédictions")
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.metric(
+        "🚀 Transportés",
+        f"{nb_transported:,}"
+    )
+
+with col2:
+    st.metric(
+        "🛬 Non transportés",
+        f"{nb_not_transported:,}"
+    )
+
+st.success(
+    f"Selon le modèle **{best_model_name}**, "
+    f"**{nb_transported:,} passagers** sur les "
+    f"**{len(test):,} passagers inconnus** seraient transportés "
+    f"vers une autre dimension."
+)
+
+# Pourcentage
+percentage = nb_transported / len(test) * 100
+
+st.metric(
+    "Part estimée des passagers transportés",
+    f"{percentage:.1f} %"
 )
