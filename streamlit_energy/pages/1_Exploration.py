@@ -5,11 +5,65 @@ import plotly.express as px
 
 st.set_page_config(
     page_title="Energy Efficiency — Exploration",
-    page_icon="🔎",
+    page_icon="🏢",
     layout="wide",
 )
 
-st.title("🔎 Exploration des données")
+st.title("🏢 Energy Efficiency")
+st.subheader("Classification des bâtiments selon leurs charges énergétiques")
+
+st.markdown("""
+### 🎯 Introduction
+
+Ce projet porte sur l'analyse de l'efficacité énergétique de bâtiments
+résidentiels à partir de leurs caractéristiques architecturales.
+
+Le jeu de données contient **768 configurations de bâtiments** décrites
+par **8 variables explicatives** telles que la compacité, les surfaces,
+la hauteur, l'orientation et les surfaces vitrées.
+
+Deux variables mesurent les besoins énergétiques :
+
+- 🔥 **Heating Load** — charge de chauffage
+- ❄️ **Cooling Load** — charge de climatisation
+
+L'objectif est de transformer ces données en un problème de
+**classification Machine Learning** afin de prédire le niveau de
+charges énergétiques d'un bâtiment.
+
+Pour cela, les charges de chauffage et de climatisation sont additionnées
+pour créer une variable `total_charges`, puis les bâtiments sont répartis
+en **4 classes énergétiques** selon les quartiles.
+
+Plusieurs algorithmes sont ensuite comparés, notamment **KNN, SVM et
+Random Forest**, afin d'identifier le modèle le plus performant.
+""")
+
+st.markdown("---")
+
+st.markdown("### 🗺️ Parcours du projet")
+
+col1, col2, col3, col4 = st.columns(4)
+
+with col1:
+    st.markdown("**🔎 1. Exploration**")
+    st.caption("Audit et compréhension des données")
+
+with col2:
+    st.markdown("**📊 2. Analyse**")
+    st.caption("Corrélations et classes énergétiques")
+
+with col3:
+    st.markdown("**🤖 3. Modélisation**")
+    st.caption("Comparaison des algorithmes")
+
+with col4:
+    st.markdown("**🏢 4. Prédiction**")
+    st.caption("Prédiction sur un nouveau bâtiment")
+
+st.markdown("---")
+
+st.header("🔎 Exploration des données")
 st.subheader("Audit du jeu de données Energy Efficiency")
 
 # ============================================================
