@@ -31,9 +31,8 @@ st.subheader("Comparaison de trois modèles de classification")
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-df = pd.read_csv(
-    os.path.join(BASE_DIR, "ENB_data.csv"),
-    sep=";"
+df = pd.read_excel(
+    os.path.join(BASE_DIR, "ENB_data.xlsx")
 )
 
 
