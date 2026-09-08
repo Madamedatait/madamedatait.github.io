@@ -21,8 +21,17 @@ prédire quels passagers ont été **Transported** vers une autre dimension.
 """)
 
 # Chargement des données
-train = pd.read_csv("spaceship_train.csv")
-test = pd.read_csv("spaceship_test.csv")
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+train = pd.read_csv(
+    os.path.join(BASE_DIR, "spaceship_train.csv")
+)
+
+test = pd.read_csv(
+    os.path.join(BASE_DIR, "spaceship_test.csv")
+)
 
 st.success("Données chargées avec succès !")
 
