@@ -30,6 +30,7 @@ df = pd.read_csv(
 
 st.write("Colonnes disponibles dans le dataset :")
 st.write(df.columns.tolist())
+st.stop()
 # ============================================================
 # TITRE
 # ============================================================
