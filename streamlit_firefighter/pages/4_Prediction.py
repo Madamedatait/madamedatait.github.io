@@ -240,21 +240,15 @@ with st.form("prediction_form"):
             )
         )
 
-       if "IncidentStationGround" in df.columns:
-
-          station_ground = st.selectbox(
-             "🚒 Station Ground",
-             sorted(
+                station_ground = st.selectbox(
+            "🚒 Station Ground",
+            sorted(
                 df["IncidentStationGround"]
                 .dropna()
                 .astype(str)
                 .unique()
             )
         )
-
-    else:
-
-        station_ground = None
 
     # --------------------------------------------------------
     # AUTRES VARIABLES CATÉGORIELLES
