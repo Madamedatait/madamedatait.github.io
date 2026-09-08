@@ -28,7 +28,8 @@ df = pd.read_csv(
     os.path.join(BASE_DIR, "firefighter_london.csv")
 )
 
-
+st.write("Colonnes disponibles dans le dataset :")
+st.write(df.columns.tolist())
 # ============================================================
 # TITRE
 # ============================================================
@@ -238,15 +239,21 @@ with st.form("prediction_form"):
             )
         )
 
-        station_ground = st.selectbox(
-            "🚒 Station Ground",
-            sorted(
+       if "IncidentStationGround" in df.columns:
+
+          station_ground = st.selectbox(
+             "🚒 Station Ground",
+             sorted(
                 df["IncidentStationGround"]
                 .dropna()
                 .astype(str)
                 .unique()
             )
         )
+
+    else:
+
+        station_ground = None
 
     # --------------------------------------------------------
     # AUTRES VARIABLES CATÉGORIELLES
