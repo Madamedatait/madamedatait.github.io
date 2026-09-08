@@ -35,6 +35,19 @@ df = pd.read_excel(
     os.path.join(BASE_DIR, "ENB_data.xlsx")
 )
 
+df.columns = [
+    "relative_compactness",
+    "surface_area",
+    "wall_area",
+    "roof_area",
+    "overall_height",
+    "orientation",
+    "glazing_area",
+    "glazing_area_distribution",
+    "heating_load",
+    "cooling_load"
+]
+
 
 # ============================================================
 # PRÉPARATION DES DONNÉES
