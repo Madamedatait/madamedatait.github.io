@@ -11,6 +11,7 @@ pages = [
     st.Page("pages/1_DataVisualization.py", title="Visualisation", icon="📊"),
     st.Page("pages/2_Modélisation.py", title="Modélisation", icon="🤖"),
     st.Page("pages/3_Profils_croisés.py", title="Profils croisés", icon="🧩"),
+    st.Page("pages/4_Spaceship_Titanic.py", title="Spaceship Titanic", icon="🚀"),
 ]
 
 pg = st.navigation(pages, position="sidebar")
