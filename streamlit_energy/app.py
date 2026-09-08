@@ -6,13 +6,9 @@ st.set_page_config(
     layout="wide",
 )
 
+# Navigation
 pages = {
     "Projet": [
-        st.Page(
-            "app.py",
-            title="Accueil",
-            icon="🏠",
-        ),
         st.Page(
             "pages/1_Exploration.py",
             title="Exploration",
@@ -23,59 +19,68 @@ pages = {
 
 pg = st.navigation(pages)
 
-if pg.url_path == "accueil":
-    st.title("🚒 London Fire Brigade")
-    st.subheader("Pipeline de Machine Learning pour prédire le temps d'arrivée des secours")
+# ============================================================
+# PAGE D'ACCUEIL
+# ============================================================
 
-    st.markdown("""
-    ### 🎯 Objectif
+st.title("🚒 London Fire Brigade")
 
-    Ce projet utilise des données du **London Fire Brigade** afin
-    d'analyser les interventions des services de secours et de construire
-    un modèle de Machine Learning capable de prédire le **temps d'arrivée
-    des secours**.
+st.subheader(
+    "Pipeline de Machine Learning pour prédire le temps d'arrivée des secours"
+)
 
-    L'objectif est de mettre en place une véritable **Pipeline de Machine
-    Learning**, depuis la préparation des données jusqu'à la prédiction.
-    """)
+st.markdown("""
+### 🎯 Objectif
 
-    st.markdown("""
-    ### 📊 Les données
+Ce projet utilise des données du **London Fire Brigade** afin
+d'analyser les interventions des services de secours et de construire
+un modèle de Machine Learning capable de prédire le **temps d'arrivée
+des secours**.
 
-    Le jeu de données combine des informations relatives aux
-    **interventions** et aux **mobilisations des véhicules** du London Fire Brigade.
+L'objectif est de mettre en place une véritable **Pipeline de Machine
+Learning**, depuis la préparation des données jusqu'à la prédiction.
+""")
 
-    Chaque observation correspond à une mobilisation associée à une intervention.
+st.markdown("""
+### 📊 Les données
 
-    La variable cible est :
+Le jeu de données combine des informations relatives aux
+**interventions** et aux **mobilisations des véhicules** du London Fire Brigade.
 
-    - ⏱️ **`AttendanceTimeSeconds`** — temps d'arrivée sur les lieux,
-      exprimé en secondes.
-    """)
+Chaque observation correspond à une mobilisation associée à une intervention.
 
-    st.markdown("""
-    ### 🧠 Approche Machine Learning
+La variable cible est :
 
-    Le projet suit plusieurs étapes :
+- ⏱️ **`AttendanceTimeSeconds`** — temps d'arrivée sur les lieux,
+  exprimé en secondes.
+""")
 
-    1. 🔎 Exploration et audit des données
-    2. 🧹 Préparation des données
-    3. ⚙️ Feature engineering
-    4. 🔄 Construction d'une Pipeline scikit-learn
-    5. 🤖 Entraînement du modèle
-    6. 📊 Évaluation des performances
-    7. ⏱️ Prédiction du temps d'arrivée
-    """)
+st.markdown("""
+### 🧠 Approche Machine Learning
 
-    st.markdown("---")
+Le projet suit plusieurs étapes :
 
-    col1, col2, col3 = st.columns(3)
+1. 🔎 Exploration et audit des données
+2. 🧹 Préparation des données
+3. ⚙️ Feature engineering
+4. 🔄 Construction d'une Pipeline scikit-learn
+5. 🤖 Entraînement du modèle
+6. 📊 Évaluation des performances
+7. ⏱️ Prédiction du temps d'arrivée
+""")
 
-    with col1:
-        st.metric("Observations", "100 000")
+st.markdown("---")
 
-    with col2:
-        st.metric("Variables", "15")
+col1, col2, col3 = st.columns(3)
 
-    with col3:
-        st.metric("Variable cible", "AttendanceTimeSeconds")
+with col1:
+    st.metric("Observations", "100 000")
+
+with col2:
+    st.metric("Variables", "15")
+
+with col3:
+    st.metric("Variable cible", "AttendanceTimeSeconds")
+
+# Lancement de la navigation
+pg.run()
