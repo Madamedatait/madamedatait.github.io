@@ -8,16 +8,92 @@ st.set_page_config(
     layout="wide",
 )
 
-st.title("🔎 Exploration des données")
+# ============================================================
+# CHARGEMENT DES DONNÉES
+# ============================================================
 
-st.subheader("Audit du jeu de données London Fire Brigade")
-
-# Chemin du fichier
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 df = pd.read_csv(
     os.path.join(BASE_DIR, "firefighter_london.csv")
 )
+
+# ============================================================
+# INTRODUCTION
+# ============================================================
+
+st.title("🚒 London Fire Brigade")
+
+st.subheader(
+    "Pipeline de Machine Learning pour prédire le temps d'arrivée des secours"
+)
+
+st.markdown("""
+### 🎯 Objectif
+
+Ce projet s'intéresse aux interventions du **London Fire Brigade** et
+vise à construire un modèle de Machine Learning capable de prédire le
+**temps d'arrivée des secours**.
+
+L'analyse combine des informations relatives aux interventions et aux
+mobilisations des véhicules afin d'identifier les caractéristiques
+pouvant influencer le temps nécessaire pour atteindre le lieu de
+l'intervention.
+""")
+
+st.markdown("""
+### 📊 Le jeu de données
+
+Le jeu de données utilisé rassemble des informations sur les
+interventions des services d'incendie à Londres.
+
+Chaque observation correspond à une **mobilisation d'un véhicule**
+associée à une intervention.
+
+Les données contiennent notamment des informations concernant :
+
+- 📅 la date et l'heure de l'intervention ;
+- 📍 la localisation de l'intervention ;
+- 🏢 le type de propriété concernée ;
+- 🚒 le nombre de véhicules mobilisés ;
+- 🚉 la station ayant déployé le véhicule ;
+- ⏱️ les différents temps associés à la mobilisation.
+""")
+
+st.markdown("""
+### 🎯 Variable cible
+
+La variable que nous cherchons à prédire est :
+
+**`AttendanceTimeSeconds`**
+
+Elle correspond au **temps d'arrivée sur les lieux**, exprimé en
+secondes.
+""")
+
+st.markdown("""
+### 🧠 Approche Machine Learning
+
+Le projet suit plusieurs étapes :
+
+1. 🔎 Exploration et audit des données
+2. 🛠️ Préparation et nettoyage des données
+3. ⚙️ Feature engineering
+4. 🔄 Construction d'une Pipeline scikit-learn
+5. 🤖 Entraînement et comparaison des modèles
+6. 📊 Évaluation des performances
+7. ⏱️ Prédiction du temps d'arrivée
+""")
+
+st.markdown("---")
+
+# ============================================================
+# AUDIT DES DONNÉES
+# ============================================================
+
+st.header("🔎 Exploration des données")
+
+st.subheader("Audit du jeu de données")
 
 st.success("✅ Données chargées avec succès !")
 
@@ -30,7 +106,7 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.metric(
         "🚒 Mobilisations",
-        f"{len(df):,}"
+        f"{df.shape[0]:,}"
     )
 
 with col2:
@@ -41,7 +117,7 @@ with col2:
 
 with col3:
     st.metric(
-        "⏱️ Temps d'arrivée moyen",
+        "⏱️ Temps moyen",
         f"{df['AttendanceTimeSeconds'].mean():.1f} s"
     )
 
@@ -49,7 +125,7 @@ with col3:
 # APERÇU
 # ============================================================
 
-st.markdown("### 👀 Aperçu des données")
+st.subheader("👀 Aperçu des données")
 
 st.dataframe(
     df.head(10),
@@ -61,7 +137,7 @@ st.dataframe(
 # INFORMATIONS GÉNÉRALES
 # ============================================================
 
-st.markdown("### 📋 Informations générales")
+st.subheader("📋 Informations générales")
 
 col1, col2 = st.columns(2)
 
@@ -79,12 +155,10 @@ with col2:
 # VALEURS MANQUANTES
 # ============================================================
 
-st.markdown("### 🔎 Valeurs manquantes")
+st.subheader("🔎 Valeurs manquantes")
 
-missing = (
-    df.isna()
-    .sum()
-    .to_frame("Nombre de valeurs manquantes")
+missing = df.isna().sum().to_frame(
+    "Nombre de valeurs manquantes"
 )
 
 missing["Pourcentage (%)"] = (
@@ -104,10 +178,10 @@ st.dataframe(
 )
 
 # ============================================================
-# TYPES
+# TYPES DE VARIABLES
 # ============================================================
 
-st.markdown("### 🧾 Types de variables")
+st.subheader("🧾 Types de variables")
 
 info = pd.DataFrame({
     "Variable": df.columns,
@@ -125,10 +199,10 @@ st.dataframe(
 )
 
 # ============================================================
-# STATISTIQUES
+# STATISTIQUES DESCRIPTIVES
 # ============================================================
 
-st.markdown("### 📈 Statistiques descriptives")
+st.subheader("📈 Statistiques descriptives")
 
 st.dataframe(
     df.describe().T,
