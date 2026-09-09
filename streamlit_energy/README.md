@@ -1,11 +1,10 @@
-# 🏢 Energy Efficiency — Machine Learning
+🏢 Energy Efficiency — Machine Learning
 
 Application interactive Streamlit consacrée à l'analyse et à la classification de l'efficacité énergétique de bâtiments résidentiels.
 
 🌐 **Application en ligne :**  
 https://madamedatait-energy.streamlit.app/
 
----
 
 ## 🎯 Présentation du projet
 
@@ -15,9 +14,7 @@ Le dataset contient **768 configurations de bâtiments** décrites par différen
 
 L'objectif est de construire un modèle de **Machine Learning** capable de classer les bâtiments selon leur niveau de charges énergétiques.
 
----
-
-## 📊 Données
+📊 Données
 
 Le dataset contient notamment les variables suivantes :
 
@@ -36,12 +33,3 @@ Les deux variables énergétiques principales sont :
 
 - 🔥 `Heating Load`
 - ❄️ `Cooling Load`
-
----
-
-## 🧠 Objectif Machine Learning
-
-Les charges de chauffage et de climatisation sont combinées afin de créer une nouvelle variable :
-
-```text
-total_charges = heating_load + cooling_load
