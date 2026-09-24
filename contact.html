@@ -123,17 +123,27 @@ src="https://www.facebook.com/tr?id=1707260820425008&ev=PageView&noscript=1"/>
     <div class="contact-card">
       <h3>Envoyer un message</h3>
       <form action="https://formsubmit.co/297e0367bc1b0ec1c1fce53de8c9df88" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="Nouveau message MadameDataIT">
-        <input type="hidden" name="_next" value="https://madamedatait.com/merci.html">
-        <input type="text" name="nom" placeholder="Votre nom" required>
-        <input type="email" name="email" placeholder="Votre email" required>
-        <input type="text" name="sujet" placeholder="Sujet" required>
-        <textarea name="message" placeholder="Votre message" required></textarea>
-        <button type="submit" class="btn">
-          Envoyer le message
-        </button>
-      </form>
+
+  <!-- Protection anti-spam -->
+  <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
+
+  <input type="hidden" name="_captcha" value="true">
+  <input type="hidden" name="_subject" value="Nouveau message MadameDataIT">
+  <input type="hidden" name="_next" value="https://madamedatait.com/merci.html">
+
+  <input type="text" name="nom" placeholder="Votre nom" required>
+
+  <input type="email" name="email" placeholder="Votre email" required>
+
+  <input type="text" name="sujet" placeholder="Sujet" required>
+
+  <textarea name="message" placeholder="Votre message" required></textarea>
+
+  <button type="submit" class="btn">
+    Envoyer le message
+  </button>
+
+</form>
     </div>
   </section>
 </main>
