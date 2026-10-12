@@ -7,7 +7,7 @@
 <title>Création de sites web professionnels | MadameDataIT</title>
 <meta name="description" content="Création de sites web vitrine pour freelances et TPE/PME : design responsive, optimisation SEO, déploiement et accompagnement. Stack Flask, HTML5, CSS3." />
 <link rel="icon" href="favicon.ico" />
-<link rel="canonical" href="https://madamedatait.com/sites.html" />
+<link rel="canonical" href="https://madamedatait.com/sites" />
 <link rel="stylesheet" href="style.css" />
 <link rel="preload" href="./poppins-v24-latin/poppins-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="./poppins-v24-latin/poppins-v24-latin-700.woff2" as="font" type="font/woff2" crossorigin />
@@ -16,7 +16,7 @@
 <meta property="og:title" content="Création de sites web professionnels | MadameDataIT" />
 <meta property="og:description" content="Sites vitrine pour freelances et TPE/PME, design responsive et SEO optimisé. Stack Flask, HTML5, CSS3." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://madamedatait.com/sites.html" />
+<meta property="og:url" content="https://madamedatait.com/sites" />
 <meta property="og:image" content="https://madamedatait.com/og-image-sites.jpg" />
 
 <!-- Données structurées JSON-LD -->
@@ -63,11 +63,10 @@ src="https://www.facebook.com/tr?id=1707260820425008&ev=PageView&noscript=1"/>
   <h1>MadameDataIT</h1>
   <div class="menu-toggle" onclick="toggleMenu()" aria-label="Menu de navigation" role="button" tabindex="0">☰</div>
   <nav id="menu" role="navigation" aria-label="Menu principal">
-    <a href="index.html">Accueil</a>
-    <a href="services.html">🛠️ Services</a>
-    <a href="portfolio.html">📁 Portfolio</a>
-    <a href="livres.html">📚 Mes Livres</a>
-    <a href="contact.html">📞 Contact</a>
+    <a href="/">Accueil</a>
+    <a href="/services">🛠️ Services</a>
+    <a href="/portfolio">📁 Portfolio</a>
+    <a href="/contact">📞 Contact</a>
   </nav>
 </header>
 
@@ -79,7 +78,7 @@ src="https://www.facebook.com/tr?id=1707260820425008&ev=PageView&noscript=1"/>
       mesure (Flask, HTML5, CSS3), responsive sur tous les écrans, et livré avec les bases pour être
       visible sur Google.
     </p>
-    <button class="btn" onclick="location.href='contact.html'">Demander un devis</button>
+    <button class="btn" onclick="location.href='/contact'">Demander un devis</button>
   </section>
 
   <section class="section" aria-label="Ce qui est inclus">
@@ -110,9 +109,9 @@ src="https://www.facebook.com/tr?id=1707260820425008&ev=PageView&noscript=1"/>
 
   <section class="section centered-section" aria-label="Tarif et délai">
     <h2 class="section-title">💶 Tarif & délai</h2>
-    <p><strong>Tarif indicatif :</strong> 500€ - 1 500€ par site, selon la complexité (nombre de pages, fonctionnalités).</p>
-    <p><strong>Délai :</strong> généralement 2 à 4 semaines selon vos besoins et la disponibilité de vos contenus (textes, images).</p>
-    <button class="btn" onclick="location.href='contact.html'">Demander un devis gratuit</button>
+    <p><strong>Tarif :</strong> à partir de 600 €, selon la complexité (nombre de pages, fonctionnalités).</p>
+    <p><strong>Délai :</strong> annoncé dans le devis, selon vos besoins et la disponibilité de vos contenus (textes, images).</p>
+    <button class="btn" onclick="location.href='/contact'">Demander un devis gratuit</button>
   </section>
 
   <section class="section centered-section" aria-label="Foire aux questions">
@@ -122,7 +121,7 @@ src="https://www.facebook.com/tr?id=1707260820425008&ev=PageView&noscript=1"/>
       <dd id="faq1" hidden>Principalement des sites vitrine pour freelances et TPE/PME : présentation d'activité, services, portfolio, contact. Stack technique : Flask, HTML5, CSS3.</dd>
 
       <dt tabindex="0" aria-expanded="false" aria-controls="faq2" id="q2">Combien de temps prend la création d'un site ?</dt>
-      <dd id="faq2" hidden>Généralement entre 2 et 4 semaines, selon la complexité du projet et la disponibilité de vos contenus.</dd>
+      <dd id="faq2" hidden>Le délai est annoncé dans le devis, selon la complexité du projet et la disponibilité de vos contenus.</dd>
 
       <dt tabindex="0" aria-expanded="false" aria-controls="faq3" id="q3">Et après la livraison, comment je mets mon site à jour ?</dt>
       <dd id="faq3" hidden>Je vous explique la structure du site lors de la livraison. Pour des mises à jour plus importantes, on peut convenir d'un accompagnement ponctuel.</dd>
@@ -132,7 +131,7 @@ src="https://www.facebook.com/tr?id=1707260820425008&ev=PageView&noscript=1"/>
   <section class="section centered-section" aria-label="Exemple de réalisation">
     <h2 class="section-title">Un exemple de réalisation</h2>
     <p>Découvrez le site CJBAT, développé et déployé avec cette même approche.</p>
-    <button class="btn" onclick="location.href='portfolio.html'">Voir le portfolio</button>
+    <button class="btn" onclick="location.href='/portfolio'">Voir le portfolio</button>
   </section>
 </main>
 
@@ -154,6 +153,7 @@ src="https://www.facebook.com/tr?id=1707260820425008&ev=PageView&noscript=1"/>
       </svg>
     </a>
   </div>
+  <p><a href="/livres" style="color:#38bdf8;text-decoration:none;">📚 Mes livres jeunesse</a></p>
   <p>© 2026 MadameDataIT - Tous droits réservés</p>
 </footer>
 
