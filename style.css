@@ -199,39 +199,6 @@ nav a:hover{
   margin: 10px 0;
 }
 
-/* Conteneur pour prix et bouton alignés verticalement */
-.price-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-top: 10px;
-}
-/* ===================================
-   CONTACT INFO
-=================================== */
-
-.contact-info{
-  margin-bottom:25px;
-}
-
-.contact-info strong{
-  display:block;
-  margin-bottom:8px;
-  color:white;
-}
-
-.contact-info p,
-.contact-info a{
-  color:#cbd5e1;
-  text-decoration:none;
-  line-height:1.7;
-}
-
-.contact-info a:hover{
-  color:#38bdf8;
-}
-
 /* ===================================
    IMAGE MAP
 =================================== */
