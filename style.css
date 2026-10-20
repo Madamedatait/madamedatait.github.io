@@ -426,5 +426,7 @@ footer{
 .portfolio-grid .contact-card.featured .btn{ margin-top:10px; }
 @media(max-width:800px){
   .portfolio-grid .contact-card.featured{ display:flex; }
-  .portfolio-grid .contact-card.featured > *{ grid-column:auto; }
+  .portfolio-grid .contact-card.featured > *{ grid-column:auto; grid-row:auto; }
+  .portfolio-grid .contact-card.featured > h3{ order:-2; }
+  .portfolio-grid .contact-card.featured > div[style*="padding-top"]{ order:-1; margin:0 0 16px 0 !important; }
 }
