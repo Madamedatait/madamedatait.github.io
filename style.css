@@ -367,3 +367,64 @@ footer{
     font-size:28px;
   }
 }
+
+
+/* ===== Page portfolio : cartes alignées ===== */
+.portfolio-grid .contact-card{
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  text-align:left;
+  padding:22px;
+}
+.portfolio-grid .contact-card h3{
+  margin-bottom:14px;
+  font-size:20px;
+  line-height:1.3;
+  min-height:2.6em;
+}
+.portfolio-grid .contact-card.featured h3{ min-height:0; font-size:24px; }
+.portfolio-grid .contact-card p{ font-size:15px; line-height:1.55; margin-bottom:10px; }
+/* visuel : même format pour toutes les cartes */
+.portfolio-grid .contact-card > img,
+.portfolio-grid .contact-card > div[style*="padding-top"],
+.portfolio-grid .media-banner{
+  order:-1;
+  width:100%;
+  aspect-ratio:16/10;
+  margin:0 0 16px 0 !important;
+  border-radius:10px !important;
+}
+.portfolio-grid .contact-card > h3{ order:-2; }
+.portfolio-grid .contact-card > div[style*="padding-top"]{ padding-top:0 !important; height:auto; }
+.portfolio-grid .contact-card > img{ object-fit:cover; object-position:top; height:auto; }
+.portfolio-grid .media-banner{
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;
+  background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 100%);
+  border:1px solid rgba(56,189,248,.25);
+}
+.portfolio-grid .media-icon{ font-size:44px; }
+.portfolio-grid .media-label{ color:#7dd3fc; font-size:14px; letter-spacing:.04em; }
+/* boutons toujours en bas, côte à côte */
+.portfolio-grid .contact-card .btn:first-of-type{ margin-top:auto; }
+.portfolio-grid .contact-card .btn{ align-self:flex-start; margin-right:10px; }
+/* grandes cartes : visuel à gauche, texte à droite */
+.portfolio-grid .contact-card.featured{
+  grid-column:1 / -1;
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);
+  column-gap:34px;
+  align-items:center;
+  padding:28px;
+}
+.portfolio-grid .contact-card.featured > *{ grid-column:2; }
+.portfolio-grid .contact-card.featured > h3{ order:0; }
+.portfolio-grid .contact-card.featured > div[style*="padding-top"],
+.portfolio-grid .contact-card.featured > img{
+  grid-column:1; grid-row:1 / span 12; order:0; margin:0 !important; aspect-ratio:16/9;
+}
+.portfolio-grid .contact-card.featured .btn{ margin-top:10px; }
+@media(max-width:800px){
+  .portfolio-grid .contact-card.featured{ display:flex; }
+  .portfolio-grid .contact-card.featured > *{ grid-column:auto; }
+}
