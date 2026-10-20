@@ -430,3 +430,11 @@ footer{
   .portfolio-grid .contact-card.featured > h3{ order:-2; }
   .portfolio-grid .contact-card.featured > div[style*="padding-top"]{ order:-1; margin:0 0 16px 0 !important; }
 }
+
+/* ===== Texte court des cartes ===== */
+.portfolio-grid .hook{ font-size:17px; font-weight:600; color:#f8fafc; line-height:1.4; margin-bottom:6px; }
+.portfolio-grid .detail{ font-size:14.5px; color:#cbd5e1; margin-bottom:12px; }
+.stack-tags{ display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px; }
+.stack-tags span{ background:rgba(56,189,248,.12); color:#7dd3fc; border:1px solid rgba(56,189,248,.3); border-radius:999px; padding:3px 11px; font-size:12.5px; }
+.portfolio-grid .note{ font-size:12.5px; opacity:.75; margin:0 0 12px; }
+.portfolio-grid .note a{ color:#38bdf8; }
