@@ -10,7 +10,6 @@ Site vitrine de Lavinia Bulgarean-Haiduc, consultante IA & automatisation (« Je
 - `sites.html` : création de sites web
 - `portfolio.html` : projets
 - `contact.html` / `merci.html` : formulaire de contact
-- `livres.html` : livres jeunesse (accessible depuis le pied de page)
 
 Les adresses sont sans `.html` (GitHub Pages).
 
